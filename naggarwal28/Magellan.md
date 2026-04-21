@@ -1,3 +1,5 @@
+Title: Magellan: A High-Performance Loop-Guided Prefetcher for Indirect Memory Access(ISCA 2025)
+
 Paper Review - https://pages.cs.wisc.edu/~karu/ArchAlphaZero/LLM_vs_Human/isca-2025-pdf/3695053.3731054.pdf
 Nishant Aggarwal
 

@@ -1,3 +1,5 @@
+Title: Hardware-aware Calibration Protocol for Quantum Computers (ISCA 2025)
+
 1. Whiteboard explanation — You're explaining this paper's mechanism to a smart colleague who hasn't read it. Walk through what they built and how it works.
 
       The paper proposes a calibration protocol for the two-qubit echoed cross resonance gate on quantum computers. The protocol optimizes for high gate fidelity and reduced calibration time and consequently system downtime for calibration. 

@@ -1,4 +1,4 @@
-# XOR Cache
+# Title: The XOR Cache: A Catalyst for Compression (ISCA 2025)
 
 ## 1. Whiteboard explanation — You're explaining this paper's mechanism to a smart colleague who hasn't read it. Walk through what they built and how it works.
 

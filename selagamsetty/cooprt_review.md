@@ -1,3 +1,5 @@
+Title: CoopRT: Accelerating BVH Traversal for Ray Tracing via Cooperative Threads (ISCA 2025)
+
 # 1. Summary (Whiteboard Explanation)
 
 ## Background
