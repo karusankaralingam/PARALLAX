@@ -1,4 +1,4 @@
-Title: LUT Tensor Core: A Soware-Hardware Co-Design for LUT-Based Low-Bit LLM Inference (ISCA 2025)
+Title: LUT Tensor Core: A Software-Hardware Co-Design for LUT-Based Low-Bit LLM Inference (ISCA 2025)
 
 # 1. Summary (Whiteboard Explanation)
 
