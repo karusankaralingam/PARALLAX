@@ -26,7 +26,7 @@ Evaluation on a 4×A100-80GB + 432-core Intel Xeon testbed demonstrates that SLI
 
 ---
 
-## What is the key insight that makes it work? (The "aha" — not what they did, but why it works)
+### What is the key insight that makes it work? (The "aha" — not what they did, but why it works)
 
 This work offers a new perspective for serverless systems. Whereas traditional serverless approaches treat each LLM instance as a task monopolizing a compute unit, this paper leverages the highly variable per-token compute intensity of LLM inference to enable multiple instances to share compute resources. This effectively allows hardware sharing across instances at token-level granularity. Resource sharing introduces contention, but it also naturally unlocks the potential for significantly higher utilization.
 
