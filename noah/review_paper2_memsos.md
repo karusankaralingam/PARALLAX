@@ -19,7 +19,7 @@ MemSOS makes the observation that memory errors only matter when that memory is 
 
 The strongest aspect is that MemSOS was ported to a real Linux system and works with modern architectural features like Folios and Multi-Generational LRU, rather than relying on simulator results. Evaluations against modern standard benchmarks like DeathStarBench and CloudSuite show that the 3% performance overhead is a realistic value and not a simulator only result.
 
-The weakest aspect is the 19000x over baseline claim. The paper claims a massive 19000x improvement in reliability. However, their baseline is a Lenovo-Dve hybrid where pages are selected randomly for mirroring under pressure. This is largely a comparison to an ‘idiot-policy’.  Applying basic heuristics, even those not nearly as complicated as what MemSOS uses, say, mirror largest pages first, might have closed that gap significantly. This makes the 19000x benchmark look completely unfair.
+The weakest aspect is the 19000x over baseline claim. The paper claims a massive 19000x improvement in reliability. However, their baseline is a Lenovo-Dve hybrid where pages are selected randomly for mirroring under pressure. This is largely a comparison to an ‘idiot-policy’.  Applying basic heuristics, even those not nearly as complicated as what MemSOS uses, say, mirror largest pages first, might have closed that gap significantly. This makes the 19000x benchmark look unfair.
 
 
 4. What did the authors not tell you? (Hidden assumptions, missing comparisons, unstated limitations)
