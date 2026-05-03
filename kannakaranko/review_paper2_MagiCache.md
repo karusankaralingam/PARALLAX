@@ -22,10 +22,13 @@ Weakest:
 The evaluation is missing data on workloads that switch rapidly between compute and storage modes, which is where we would see the real performance hit from constant evictions. There's no deep dive into the actual latency cost of kicking out a "dirty" cacheline just to make room for a vector register. Also, the paper doesn't discuss much on the loss of cache associativity and a potential spike in conflict misses.
 
 **4. What did the authors not tell you? (Hidden assumptions, missing comparisons, unstated limitations)**
-The paper leaves the interface between the Virtual Engine and the ISA not that clear. It does not detail how vector register metadata bypasses the traditional memory hierarchy or where it integrates into the processor pipeline.
-There is no detailed discussion on the hardware overhead of the Presence bit, which is critical for maintaining cache coherency and ensuring that standard memory accesses do not conflict with active in-cache computations.
-The evaluation lacks an analysis of associativity of the cache, potentially leading to increased conflict misses and structural hazards for standard data workloads.
+- The paper leaves the interface between the Virtual Engine and the ISA not that clear. It does not detail how vector register metadata bypasses the traditional memory hierarchy or where it integrates into the processor pipeline.
+
+- There is no detailed discussion on the hardware overhead of the Presence bit, which is critical for maintaining cache coherency and ensuring that standard memory accesses do not conflict with active in-cache computations.
+
+- The evaluation lacks an analysis of associativity of the cache, potentially leading to increased conflict misses and structural hazards for standard data workloads.
 
 **5. What's the connection to ideas outside this paper's scope? (Cross-domain links, broader implications)**
-Developing a more generic ISA specific for In-memory compute whenever required can enable more controllability and can also simplify the compiler backend flows.
-One of the drawbacks of In-memory computing in general is its decrease in associativity, which can be addressed by introducing skewed associativity or cuckoo hashing or bit more advanced versions such as ZCache. This can be a system-level solution that makes the Fused Array concept much more viable for general-purpose CPUs.
+- Developing a more generic ISA specific for In-memory compute whenever required can enable more controllability and can also simplify the compiler backend flows.
+
+- One of the drawbacks of In-memory computing in general is its decrease in associativity, which can be addressed by introducing skewed associativity or cuckoo hashing or bit more advanced versions such as ZCache. This can be a system-level solution that makes the Fused Array concept much more viable for general-purpose CPUs.
