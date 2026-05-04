@@ -6,8 +6,8 @@
 
 ### Instructions for Evaluators
 
-You will receive two analyses of the same computer architecture paper, labeled **Analysis A** and **Analysis B**. The order is randomized. You do not know which analysis was produced by a human researcher and which by an automated system. **Do not attempt to guess the source — judge only the content.**
-
+You will receive two analyses of the same computer architecture paper, labeled **Analysis A** and **Analysis B**. For the purpose of this rubric **Analysis A** is the human generated review by one of your peers. **Analysis B** is the LLM generated one.
+ 
 Before scoring, read the original paper (or at minimum its abstract and introduction) so you can assess accuracy.
 
 For each of the six dimensions below, assign a score from 1 to 5 for **both** Analysis A and Analysis B independently. Then provide an overall preference and a brief justification.
