@@ -114,31 +114,37 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 ### Summary Score Sheet
 
-**Paper title:** _______________________________________________
+**Paper title:** CoopRT: Accelerating BVH Traversal for Ray Tracing via Cooperative Threads
 
-**Evaluator name:** ____________________________________________
+**Evaluator name:** Ian McDougall
 
-**Date:** ______________________________________________________
+**Date:** 5/4/2026
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy |3|4|
+| 2. Insight Depth |3|4|
+| 3. Critical Rigor |3|4|
+| 4. Calibration |4|4|
+| 5. Usefulness |2|4|
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:** B clearly
 
 **Justification:**
 
-\_______________________________________________________________
+\While the human review did not have any glaring issues (it presented
 
-\_______________________________________________________________
+\technically correct information), its description of the paper was 
 
-\_______________________________________________________________
+\very surface-level. While you would get the big-picture idea of the paper,
 
-\_______________________________________________________________
+\the AI-generated review actually provided the technical depth which would
+
+\help to better prepare you to discuss it. This extends as well to the methodology
+
+\and hidden assumptions sections - the human review is not incorrect (its points
+
+\are brought up by the AI review as well), but they simply lack depth.
 
 ---
 
