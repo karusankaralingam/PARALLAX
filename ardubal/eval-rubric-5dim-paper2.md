@@ -132,18 +132,18 @@ Accelerating Hybrid Quantum-Classical Computing
 
 **Justification:**
 
-\This is an interesting set of reviews, since the human review has
-\a better overview of the paper (Q1) while the machine-generated
-\review has better insights about the paper (Q2-Q4). While the human
-\review's Q1 covers the whole paper's mechanism in-depth, the machine-generated
-\review's Q1 completely skips over the software component of the paper.
-\On the other hand, the machine-generated review has a number of good insights
-\regarding the paper's weaknesses (e.g. that the baseline comparison is
-\Fundamentally out-of-date, using ethernet rather than faster technologies),
-\while the human review, while pointing out at least one solid weakness (lack
-\of information regarding compilation details) does not explain how this would
-\impact performance. I think that these dueling aspects balance out, leading to 
-\a tie.
+This is an interesting set of reviews, since the human review has
+a better overview of the paper (Q1) while the machine-generated
+review has better insights about the paper (Q2-Q4). While the human
+review's Q1 covers the whole paper's mechanism in-depth, the machine-generated
+review's Q1 completely skips over the software component of the paper.
+On the other hand, the machine-generated review has a number of good insights
+regarding the paper's weaknesses (e.g. that the baseline comparison is
+Fundamentally out-of-date, using ethernet rather than faster technologies),
+while the human review, while pointing out at least one solid weakness (lack
+of information regarding compilation details) does not explain how this would
+impact performance. I think that these dueling aspects balance out, leading to 
+a tie.
 ---
 
 ### Evaluation Integrity
