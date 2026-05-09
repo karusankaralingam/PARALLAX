@@ -128,7 +128,7 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 | 4. Calibration |5|5|
 | 5. Usefulness |3|5|
 
-**Overall preference:** **A clearly** / ~~A somewhat~~ / ~~Tie~~ / ~~B somewhat~~ / ~~B clearly~~
+**Overall preference:**~~A clearly~~ / ~~A somewhat~~ / ~~Tie~~ / ~~B somewhat~~ /**B clearly**
 
 **Justification:**
 
