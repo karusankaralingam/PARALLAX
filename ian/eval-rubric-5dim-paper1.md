@@ -114,31 +114,31 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 ### Summary Score Sheet
 
-**Paper title:** _______________________________________________
+**Paper title:** Forest: Access-aware GPU UVM Management
 
-**Evaluator name:** ____________________________________________
+**Evaluator name:** Vishnu Ramadas
 
-**Date:** ______________________________________________________
+**Date:** 05.09.2026
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy |3|5|
+| 2. Insight Depth |3|5|
+| 3. Critical Rigor |3|5|
+| 4. Calibration |4|3|
+| 5. Usefulness |3|5|
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:** A clearly / A somewhat / Tie / B somewhat / **B clearly**
 
 **Justification:**
 
-\_______________________________________________________________
+- Both reviews describe the mechanism correctly. Analysis A explains the motivation behind the work well and gives a good overview of the proposed design. Analysis B is more in-depth and useful in understanding the exact details of the proposal.
 
-\_______________________________________________________________
+- Analysis A identifies one key insights that explain why the mechanism works but fails to mention the critical gap in prior solutions. Analysis B does a more thorough job of identifying existing gaps and understanding why the mechanism mitigates them to a reasonable extent. 
 
-\_______________________________________________________________
+- Analysis A offers a more balanced view on the pros and cons of the paper. It confidently identifies a few pitfalls in the evaluation. Analysis B identifies several pitfalls but some of it is harsh. A few pitfalls it points are low-hanging fruits and not serious enough. A handfull of Analysis B's pitfalls seem speculative. Analysis B also identifies the same pitfalls that analysis A does. 
 
-\_______________________________________________________________
+- Overall, Analysis B is more detailed and critically reasons about the mechanism. Analysis A is good at explaining the problem but isn't detailed enough for reproduction. This moves my preference towards analysis B.
 
 ---
 

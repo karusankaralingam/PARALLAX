@@ -114,31 +114,31 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 ### Summary Score Sheet
 
-**Paper title:** _______________________________________________
+**Paper title:** ELORA: Efficient LoRA and KV Cache Management for Multi-LoRA LLM Serving
 
-**Evaluator name:** ____________________________________________
+**Evaluator name:** Vishnu Ramadas
 
-**Date:** ______________________________________________________
+**Date:** 05.09.2026
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy |3|4|
+| 2. Insight Depth |4|5|
+| 3. Critical Rigor |4|5|
+| 4. Calibration |4|5|
+| 5. Usefulness |3|5|
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:** A clearly / A somewhat / Tie / B somewhat / **B clearly**
 
 **Justification:**
 
-\_______________________________________________________________
+- Both critiques do a good job of describing how the mechanism works. Analayis A highlights the gap in current designs and explains how the paper addresses this to unlock better performance. Analysis B covers the same aspects but is more detailed in its description. Analysis B can be used to reproduce most of the paper and only leaves out a few secondary details.
 
-\_______________________________________________________________
+- Both critiques identify the same key insight. Analysis A explains why the insight is useful in overcoming the shortcomings of existing work. Analysis B goes one step further and explains additional non-obvious justifications for the same insight. Analysis B also identifies tradeoffs in the mechanism and breaks down all parts of the paper into novel/not novel aspects.
 
-\_______________________________________________________________
+- Both critiques identify similar strenghts and weaknesses. They both provide the same reasoning too. Analysis B provides three additional weaknesses; two of them are minor and not a hindrance to understanding the paper's key idea.   
 
-\_______________________________________________________________
+- Overall, Analysis B covers all the aspects that analysis A pointed out. In additon, analysis B is more detailed in its mechanism description. This alone makes analysis B stand out when compared with analysis A.
 
 ---
 
