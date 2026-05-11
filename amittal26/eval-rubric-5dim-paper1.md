@@ -122,23 +122,21 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy |4|5|
+| 2. Insight Depth |5|5|
+| 3. Critical Rigor |4|5|
+| 4. Calibration |5|4|
+| 5. Usefulness |4|5|
+Total |22|24|
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:** B somewhat
 
 **Justification:**
 
-\_______________________________________________________________
+B's mechanism breakdown was excellent and in-depth. It walks through the control flow well enough that one could re-explain IPEX without going back to the paper.
+B catches more specific weaknesses with reasoning attached, like the unmodeled voltage comparator cost and the divider implementation that A doesn't get to. 
+A few of B's statements are stated over-confidently whereas A is more honest about what it knows.
 
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
 
 ---
 
