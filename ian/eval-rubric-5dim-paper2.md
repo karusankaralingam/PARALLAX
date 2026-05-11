@@ -122,23 +122,20 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
-
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+| 1. Mechanistic Accuracy |5|4|
+| 2. Insight Depth |5|5|
+| 3. Critical Rigor |4|5|
+| 4. Calibration |5|4|
+| 5. Usefulness |5|4|
+Total |24|22|
+**Overall preference:** A somewhat
 
 **Justification:**
 
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
+A did a great job in explaining the core mechanism in simple terms whereas B used terms like RCR without expanding. 
+B does better where it identifies more weaknesses of the paper compared to A, for example the bandwidth wastage. 
+A sounds more measured compared to B in terms of calibration.
+A is good for reading before a meeting to explain the crux of the paper.
 
 ---
 
