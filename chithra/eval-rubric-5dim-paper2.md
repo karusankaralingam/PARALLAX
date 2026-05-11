@@ -114,31 +114,31 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 ### Summary Score Sheet
 
-**Paper title:** _______________________________________________
-
-**Evaluator name:** ____________________________________________
-
-**Date:** ______________________________________________________
+**Paper title:** Neo — Accelerating FHE on GPU Tensor Cores
+**Evaluator name:** Noah Scott
+**Date:** 5/10/2026
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy |4|5|
+| 2. Insight Depth |4|5|
+| 3. Critical Rigor |4|5|
+| 4. Calibration |5|5|
+| 5. Usefulness |4|5|
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:** B clearly
 
 **Justification:**
 
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
+	So I'm not gonna go out and, ya know, make claims; but it's very clear
+	that A is also an AI result. Just on the em-dash usage and the formating
+	being the exact same as B.
+	
+	So with that in mind, B is the higher quality result. A is thinner across
+	the board, less detailed. 
+	
+	I think this entry might need to be struck out, if A is confirmed to be
+	entirely AI, and not a human result.
 
 ---
 

@@ -114,31 +114,43 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 ### Summary Score Sheet
 
-**Paper title:** _______________________________________________
+**Paper title:** The Memory Processing Unit: A Generalized Interface for End to End In Memory Execution  
 
-**Evaluator name:** ____________________________________________
+**Evaluator name:** Noah Scott
 
-**Date:** ______________________________________________________
+**Date:** 5/9/2026
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy |4|5|
+| 2. Insight Depth |4|5|
+| 3. Critical Rigor |5|5|
+| 4. Calibration |4|4|
+| 5. Usefulness |4|5|
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:** B clearly
 
 **Justification:**
 
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
+	By virtue of being longer, more in detail, and in general being more useful to someone 
+	who has grounding on memory tech/PUM, B wins as the most desired summary.
+	
+	That being said, A was not explicitly wrong or unclear. It was descriptive in
+	what it saw as strengths/limitations of the paper, however B provided a much wider selection
+	that ultimately gave a more clear image of the entire paper.
+	
+	I feel that both A and B provide a fine insight to the paper that would accelerate
+	building an understanding, and if B was to have a weakness, I feel that A is
+	easier to digest for someone unfamiliar with PUM. But as someone who has read
+	on PUM before, B is the clear winner. B captures what I would want to know
+	about the paper in the detail that I would want to know it.
+	
+	The core seperation here to me isn't the ability to explain the paper to 
+	a possible college, or capture its strengths and weaknesses. To me the
+	core seperation is the ability to do the extra grounding work, to
+	capture every weakness and not just one or two. B had the ability to
+	do more work. That made B more useful, but does not imply A to be
+	wrong or misguided.
 
 ---
 
