@@ -120,25 +120,25 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy |4|5|
+| 1. Mechanistic Accuracy |5|5|
 | 2. Insight Depth |4|5|
-| 3. Critical Rigor |4|5|
+| 3. Critical Rigor |3|4|
 | 4. Calibration |5|5|
 | 5. Usefulness |4|5|
 
-**Overall preference:** B clearly
+**Overall preference:** B somewhat
 
 **Justification:**
 
-	So I'm not gonna go out and, ya know, make claims; but it's very clear
-	that A is also an AI result. Just on the em-dash usage and the formating
-	being the exact same as B.
+	A provides a clean and concise explanation of the paper, and the analysis
+	provides a effective explanation for someone not well familiar with FHE. However,
+	for someone who is, B is much more thorough, with better critiques of the paper.
 	
-	So with that in mind, B is the higher quality result. A is thinner across
-	the board, less detailed. 
+	Not that A is incorrect in anyway, but the critcal rigor is weaker than B.
+	A gets some major errors, but some are also surface complaints, and some have no further explanation. 
+	B has a much wider selection of strengths and weaknesses, but each one is a bit short.
 	
-	I think this entry might need to be struck out, if A is confirmed to be
-	entirely AI, and not a human result.
+	So assuming you had to attend a *in depth* meeting about the paper, B would be far more useful.
 
 ---
 
