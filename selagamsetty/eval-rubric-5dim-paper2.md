@@ -114,33 +114,25 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 ### Summary Score Sheet
 
-**Paper title:** _______________________________________________
+**Paper title:** LUT Tensor Core: A Software-Hardware Co-Design for LUT-Based Low-Bit LLM Inference (ISCA 2025)
 
-**Evaluator name:** ____________________________________________
+**Evaluator name:** Sreeraj Kannakarankodi
 
-**Date:** ______________________________________________________
+**Date:** 13th May, 2026
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy | 4 | 5 |
+| 2. Insight Depth | 3 | 5 |
+| 3. Critical Rigor | 3 | 5 |
+| 4. Calibration | 5 | 5 |
+| 5. Usefulness | 4 | 5 |
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:**  B clearly
 
 **Justification:**
 
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
-
----
+While both reviews are highly informative, Review B ultimately holds a competitive edge due to its evidentiary depth and structural cohesion. Review B consistently anchors its claims with specific data points from the paper—a level of granular support that Review A occasionally overlooks. In terms of critical rigor, Review B explores a broader spectrum of analytical directions, particularly regarding the paper’s underlying assumptions and evaluation metrics. It should be noted, however, that Review A provides a very strong and logically sound foundation for every point it raises; Review B simply manages to incorporate more critical angles and transitions more seamlessly between discussion points.
 
 ### Evaluation Integrity
 
