@@ -18,11 +18,11 @@ Take your time. There are no right answers — we want your honest expert judgme
 
 ### Dimension 1: Mechanistic Accuracy
 
-Analysis A, Human Generated: 4 - Mostly accurate with minor omissions. The core mechanism is correct but some secondary details are missing or slightly imprecise.
+Analysis A, Human Generated: 4 - Mostly accurate with minor omissions. The core mechanism is correct, but some secondary details are missing or slightly imprecise.
 
 Analysis B, LLM Generated: 5 - Precise and complete. All key structures, policies, and datapath modifications are correctly described. No mischaracterizations. A reader unfamiliar with the paper could reconstruct the core mechanism from this description.
 
-I think both review were accurate in their description of the paper, and described POLO in enough detail to glean the salient points of the design. The LLM review stressed reiterating key metrics from the article directly, which did well to concretely support their points. However, I felt like they were a bit extraneous, and did not help in determining "implementation" details where a reader could re-implement the design. The human review focused mostly on the evaluation of the design, which highlighted the thoroughness of the paper. Their analysis did correctly describe what was built, but not to the level of detail where the mechanism could be implemented from the description alone. For that reason, I ranked the LLM generated review higher for this dimension.
+I think both reviews were accurate in their description of the paper and described POLO in enough detail to glean the salient points of the design. The LLM review stressed reiterating key metrics from the article directly, which did well to concretely support their points. However, I felt like they were a bit extraneous, and did not help in determining "implementation" details where a reader could re-implement the design. The human review focused mostly on the evaluation of the design, which highlighted the thoroughness of the paper. Their analysis did correctly describe what was built, but not to the level of detail where the mechanism could be implemented from the description alone. For that reason, I ranked the LLM generated review higher for this dimension.
 
 ---
 
@@ -62,7 +62,7 @@ Analysis A, Human Generated: 4 - Good preparation. You would understand the core
 
 Analysis B, LLM Generated: 5 - Reading this analysis would prepare you as well as or better than reading the paper itself under time pressure. You would walk into the meeting able to discuss the mechanism, its strengths and weaknesses, and its broader significance.
 
-To reiterate, I think the LLM review crowds their response with speciifc results or quantitative points, which ditracts from the overall readability of the review. However, the LLM response is more broad, covers more of the key features, and provides enough detail to make the response more useful. The human review reads a lot more smoothly, but it does feel like it's missing a level of detail where reading the review alone would provide enough information about the paper.
+To reiterate, I think the LLM review crowds their response with specific results or quantitative points, which detracts from the overall readability of the review. However, the LLM response is broader, covers more of the key features, and provides enough detail to make the response more useful. The human review reads a lot more smoothly, but it does feel like it's missing a level of detail, where reading the review alone did not provide enough information about the paper.
 
 ---
 
@@ -76,7 +76,7 @@ After scoring all five dimensions for both analyses, provide:
 
 **Justification (2–4 sentences):**
 
-To liken the responses to a computer architecture analogy, the human generated review is a lot like a domain specific accelerator. In the parts where the human response did well, it did exceedingly well, providing nuanced and targetted feedback that was well thought out and relevant. In contrast, the LLM review could be more likened to an optimized, general purpose CPU. It covers a broader spread of key points across all the dimensions, and provides reasonably high quality responses to understand the paper more thoroughly. While I prefer the writing style and presentation of the human review, the LLM review was more detailed.
+To liken the responses to a computer architecture analogy, the human generated review is a lot like a domain specific accelerator. In the parts where the human response did well, it did exceedingly well, providing nuanced and targeted feedback that was well thought out and relevant. In contrast, the LLM review could be more likened to an optimized, general-purpose CPU. It covers a broader spread of key points across all the dimensions and provides reasonably high-quality responses to understand the paper more thoroughly. While I prefer the writing style and presentation of the human review, the LLM review was more detailed.
 
 ---
 
