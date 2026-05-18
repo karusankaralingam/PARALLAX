@@ -114,31 +114,25 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 ### Summary Score Sheet
 
-**Paper title:** _______________________________________________
+**Paper title:** Hardware-aware Calibration Protocol for Quantum Computers (ISCA 2025)
 
-**Evaluator name:** ____________________________________________
+**Evaluator name:** Karu Sankaralingam
 
-**Date:** ______________________________________________________
+**Date:** 05/18/2026
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy | 3|5 |
+| 2. Insight Depth |3 |5 |
+| 3. Critical Rigor |4 |5 |
+| 4. Calibration |3 |5 |
+| 5. Usefulness |3 |5 |
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:** B clearly
 
-**Justification:**
+**Justification:** Review B simply had more technical depth of the paper. In particular it's description of the key insights and the final assessment of weakeness (showing the technique applied for 20% of qubit was useful and missed by reviewer A). This is a bit unfair - the LLM review read the Appendix also and observes, " The artifact appendix (Section A.1) reveals "IBM currently suspends its support for pulse-level circuits." The entire protocol requires pulse-level access that IBM is deprecating—**this work may not be reproducible on future IBM hardware** without significant API changes, and external researchers cannot currently replicate these techniques."
 
-\_______________________________________________________________
 
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
 
 ---
 
