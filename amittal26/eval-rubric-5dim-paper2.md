@@ -114,31 +114,23 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 ### Summary Score Sheet
 
-**Paper title:** _______________________________________________
+**Paper title:** Precise exceptions in relaxed architectures
 
-**Evaluator name:** ____________________________________________
+**Evaluator name:** Karu Sankaralingam
 
-**Date:** ______________________________________________________
+**Date:** 05/18/2026
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy |3 |5 |
+| 2. Insight Depth |3 |5 |
+| 3. Critical Rigor |2 |5 |
+| 4. Calibration |2 |5 |
+| 5. Usefulness |3 |5 |
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:** B clearly
 
-**Justification:**
-
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
+**Justification:** This is difficult paper to read, unless you are an expert in memory models. Review A is competent, but lacks insight or depth. Review B is far more detailed and gets really into the guts of the paper, includin observing the paper doesn't precisely defined precise exceptions. And the summary of the what the paper actually contributes and how the the contribution is "evaluated" is explained much better in review B.
 
 ---
 
