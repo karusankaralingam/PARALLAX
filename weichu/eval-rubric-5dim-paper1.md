@@ -114,31 +114,29 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 ### Summary Score Sheet
 
-**Paper title:** _______________________________________________
+**Paper title:** Towards Resource Efficient Serverless LLM Inference with SLINFER
 
-**Evaluator name:** ____________________________________________
+**Evaluator name:** Adarsh Mittal
 
-**Date:** ______________________________________________________
+**Date:** May 19, 2026
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy | 4 | 5 |
+| 2. Insight Depth | 4 | 5 |
+| 3. Critical Rigor | 4 | 5 |
+| 4. Calibration | 5 | 4 |
+| 5. Usefulness | 4 | 5 |
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:** B somewhat better
 
 **Justification:**
 
-\_______________________________________________________________
+Analysis B provided a substantially deeper systems-level reconstruction of the paper and explained the scheduling, memory orchestration, and heterogeneous resource management mechanisms with much greater precision. The discussion around token-level temporal multiplexing, headroom-driven scheduling, KV-cache scaling behavior, and the interaction between batching efficiency and fragmentation demonstrated a stronger understanding of the operational constraints behind serverless LLM inference systems. The critique section was also more rigorous because it identified concrete concerns around workload representativeness, CPU feasibility constraints, cold-start accounting, missing tail-latency analysis, and hidden scheduling overheads.
 
-\_______________________________________________________________
+Analysis A was still strong and in many places easier to follow from a high-level systems perspective. The explanation was concise and communicated the central intuition behind resource sharing effectively. The broader connection to classical operating systems and scheduling principles was also well articulated. However, many sections remained closer to the paper’s framing itself, while Analysis B extracted additional implementation implications and deployment limitations that were not explicitly emphasized by the authors.
 
-\_______________________________________________________________
-
-\_______________________________________________________________
+Overall, Analysis B would better prepare me for a detailed technical discussion or paper review meeting because it combined mechanism reconstruction, evaluation critique, and practical deployment reasoning at a deeper level while still remaining mostly well calibrated.
 
 ---
 
