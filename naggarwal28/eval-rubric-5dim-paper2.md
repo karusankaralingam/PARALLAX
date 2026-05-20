@@ -114,31 +114,29 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 ### Summary Score Sheet
 
-**Paper title:** _______________________________________________
+**Paper title:** C3 CXL Coherence Controllers for Heterogeneous Architectures
 
-**Evaluator name:** ____________________________________________
+**Evaluator name:** Adarsh Mittal
 
-**Date:** ______________________________________________________
+**Date:** May 19, 2026
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy | 4 | 5 |
+| 2. Insight Depth | 4 | 5 |
+| 3. Critical Rigor | 4 | 5 |
+| 4. Calibration | 5 | 4 |
+| 5. Usefulness | 4 | 5 |
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:** B somewhat better
 
 **Justification:**
 
-\_______________________________________________________________
+Analysis B provided a substantially deeper architecture-level understanding of the paper. The explanation of the compound-state construction, protocol translation flow, BIConflict handling, and transient-state behavior demonstrated a much stronger grasp of how the mechanism actually operates internally. The critique section was also more rigorous because it identified concrete limitations around PCIe modeling fidelity, scalability, cache sizing, and hidden hardware costs rather than remaining at a higher conceptual level.
 
-\_______________________________________________________________
+Analysis A was still strong and in some ways felt more natural and concise to read. The explanation flow was cleaner and easier to follow for a first-pass discussion. However, many sections stayed closer to the paper narrative itself, while Analysis B extracted additional implementation implications and system-level consequences that were not explicitly emphasized by the authors.
 
-\_______________________________________________________________
-
-\_______________________________________________________________
+Overall, Analysis B would prepare me better for a technical architecture discussion or paper review meeting because it combined mechanism reconstruction, evaluation critique, and broader system implications at a deeper level while still remaining mostly well calibrated.
 
 ---
 
