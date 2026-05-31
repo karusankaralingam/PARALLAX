@@ -114,31 +114,23 @@ What drove your preference? Which dimensions mattered most? Was there a specific
 
 ### Summary Score Sheet
 
-**Paper title:** _______________________________________________
+**Paper title:** The XOR Cache: A Catalyst for Compression
 
-**Evaluator name:** ____________________________________________
+**Evaluator name:** Karthikeyan Sankaralingam
 
-**Date:** ______________________________________________________
+**Date:** 05/19/2026
 
 | Dimension | Analysis A (1–5) | Analysis B (1–5) |
 |-----------|:---:|:---:|
-| 1. Mechanistic Accuracy | | |
-| 2. Insight Depth | | |
-| 3. Critical Rigor | | |
-| 4. Calibration | | |
-| 5. Usefulness | | |
+| 1. Mechanistic Accuracy |3 |5 |
+| 2. Insight Depth |3 |5 |
+| 3. Critical Rigor |3 |5 |
+| 4. Calibration |3 |5 |
+| 5. Usefulness |2 |5 |
 
-**Overall preference:** A clearly / A somewhat / Tie / B somewhat / B clearly
+**Overall preference:** B clearly
 
-**Justification:**
-
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
-
-\_______________________________________________________________
+**Justification:** B was remarkably deep and well explained. In particular the detailed description of the related work and how this paper composes previous ideas really stood out and helped explain the paper.
 
 ---
 

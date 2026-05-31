@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syntheses</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+        color: #333;
+        background: #f8f9fa;
+    }
+    /* Left Navigation */
+    #sidebar {
+        width: 350px;
+        min-width: 350px;
+        height: 100vh;
+        overflow-y: auto;
+        background: #1a1a2e;
+        color: #ccc;
+        padding: 15px 10px;
+        font-size: 13px;
+        border-right: 2px solid #16213e;
+    }
+    #sidebar h1 {
+        color: #e94560;
+        font-size: 18px;
+        margin-bottom: 8px;
+        padding: 5px;
+    }
+    #sidebar input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 12px;
+        border: 1px solid #333;
+        border-radius: 4px;
+        background: #16213e;
+        color: #eee;
+        font-size: 13px;
+    }
+    #sidebar ul {
+        list-style: none;
+    }
+    .nav-paper {
+        margin-bottom: 4px;
+    }
+    .nav-paper > .paper-link {
+        display: block;
+        padding: 6px 8px;
+        color: #e0e0e0;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 12px;
+        border-radius: 3px;
+        word-break: break-word;
+    }
+    .nav-paper > .paper-link:hover {
+        background: #16213e;
+        color: #e94560;
+    }
+    .nav-reviews {
+        display: none;
+        margin-left: 12px;
+        margin-bottom: 6px;
+    }
+    .nav-paper.expanded .nav-reviews {
+        display: block;
+    }
+    .nav-reviews li a {
+        display: block;
+        padding: 3px 8px;
+        color: #8899aa;
+        text-decoration: none;
+        font-size: 11px;
+        border-radius: 3px;
+    }
+    .nav-reviews li a:hover {
+        color: #e94560;
+        background: #0f3460;
+    }
+    /* Main Content */
+    #content {
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 30px 50px;
+        scroll-behavior: smooth;
+    }
+    .paper {
+        margin-bottom: 20px;
+    }
+    .paper h2 {
+        color: #1a1a2e;
+        font-size: 20px;
+        border-bottom: 3px solid #e94560;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+        word-break: break-word;
+    }
+    .review {
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 20px 25px;
+        margin-bottom: 15px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .review h3 {
+        color: #0f3460;
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+    .review-content {
+        line-height: 1.7;
+        font-size: 14px;
+    }
+    .review-content h1, .review-content h2, .review-content h3,
+    .review-content h4, .review-content h5 {
+        margin-top: 16px;
+        margin-bottom: 8px;
+        color: #1a1a2e;
+    }
+    .review-content p { margin-bottom: 10px; }
+    .review-content ul, .review-content ol { margin: 10px 0 10px 25px; }
+    .review-content li { margin-bottom: 4px; }
+    .review-content table {
+        border-collapse: collapse;
+        margin: 10px 0;
+        font-size: 13px;
+    }
+    .review-content table th, .review-content table td {
+        border: 1px solid #dee2e6;
+        padding: 6px 10px;
+    }
+    .review-content table th { background: #f1f3f5; }
+    .review-content code {
+        background: #f1f3f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-size: 13px;
+    }
+    .review-content pre {
+        background: #1a1a2e;
+        color: #e0e0e0;
+        padding: 12px;
+        border-radius: 5px;
+        overflow-x: auto;
+        margin: 10px 0;
+    }
+    .review-content pre code {
+        background: none;
+        color: inherit;
+    }
+    .back-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 14px;
+        background: #e94560;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+    .back-btn:hover {
+        background: #c73e54;
+    }
+    .paper-divider {
+        border: none;
+        border-top: 2px dashed #dee2e6;
+        margin: 30px 0;
+    }
+    .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<nav id="sidebar">
+    <h1>Syntheses</h1>
+    <input type="text" id="search" placeholder="Filter..." autocomplete="off">
+    <ul id="nav-list">
+        
+            <li class="nav-paper">
+                <a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1" class="paper-link">micro_1__work_1__tools_1__CA_1__kv_1__de_1</a>
+                <ul class="nav-reviews"><li><a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1--synthesis">Synthesis</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1--chief-architect-review">Chief Architect Review</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1--deep-learnging-and-ai-hardware-inference-review">Deep Learnging And Ai Hardware Inference Review</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1--dr-microarch-reader-review">Dr Microarch Reader Review</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1--kv-cache-compression-and-paged-memory-management-for-llms-review">Kv Cache Compression And Paged Memory Management For Llms Review</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1--prof-simtools-reader-review">Prof Simtools Reader Review</a></li><li><a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1--prof-workloads-reader-review">Prof Workloads Reader Review</a></li></ul>
+            </li>
+        
+    </ul>
+</nav>
+
+<main id="content">
+    <div id="top"></div>
+    
+            <section class="paper" id="micro-1-work-1-tools-1-ca-1-kv-1-de-1">
+                <h2>micro_1__work_1__tools_1__CA_1__kv_1__de_1</h2>
+                
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-kv-1-de-1--synthesis">
+                    <h3>Synthesis</h3>
+                    <div class="review-content"><h1 id="master-class-reading-guide-elora-paper">Master Class Reading Guide: ELORA Paper</h1>
+<h2 id="1-the-real-abstract-no-hype-summary">1. The "Real" Abstract (No-Hype Summary)</h2>
+<p><strong>What they actually built:</strong> A memory management system for multi-tenant LLM serving that tracks which KV caches belong to which LoRA adapters using a tree data structure, and evicts/prefetches based on a hand-tuned cost function instead of LRU.</p>
+<p><strong>The actual contribution:</strong> When you serve one base LLM with many LoRA adapters (fine-tuned variants), current systems like vLLM stupidly keep KV caches in GPU memory even after evicting the LoRA they belong to—making those caches useless. ELORA enforces a simple invariant: "never cache KVs for a swapped-out LoRA" by organizing everything in a tree and only evicting leaf nodes. That's the core insight. The rest is a cost model that tries to predict what's worth keeping.</p>
+<p><strong>What it's NOT:</strong> This is not a new attention mechanism, not a compression technique, not a hardware accelerator. It's a scheduling/caching policy paper dressed up with systems complexity.</p>
+<hr />
+<h2 id="2-the-rashomon-synthesis-conflicting-expert-perspectives">2. The "Rashomon" Synthesis (Conflicting Expert Perspectives)</h2>
+<p>The experts viewed this paper through very different lenses, revealing fundamental tensions:</p>
+<p><strong>Dr. Microarch</strong> appreciated the clean tree invariant but worried about <strong>fragmentation and coherence</strong>: "When you load a LoRA, you're now doing scattered reads across the block pool... They use asynchronous PCIe transfers to hide this, but the latency for a full LoRA swap-in could be worse than a contiguous transfer." He also flagged that with 8-GPU tensor parallelism, the paper never explains how the dependency tree stays consistent across ranks.</p>
+<p><strong>Prof. Workloads</strong> was skeptical of the <strong>workload construction</strong>: "They're Frankensteining two unrelated traces together. Azure function invocations have completely different temporal characteristics than translation requests." She also caught that the "peak load improvement" metric is threshold-based and can be gamed—if ELORA hits 499ms TTFT while vLLM hits 501ms, that counts as infinite improvement.</p>
+<p><strong>Prof. SimTools</strong> flagged the <strong>missing artifact</strong>: "No GitHub link. No Docker container. No reproducibility package. This is Paperware until proven otherwise." He also did the math on their bandwidth claims and found they conflate block-level and cache-level operations throughout.</p>
+<p><strong>The Chief Architect</strong> would strip out most of the complexity: "Replace the complex cost model with a two-level LRU and a simple admission control. The sigmoid-based time decay is LSTM-inspired nonsense for a caching problem."</p>
+<p><strong>The tension to understand:</strong> There's a fundamental disagreement about whether the cost model (Equation 6) is a principled contribution or over-engineered heuristics. The dependency tree is universally praised as elegant; the cost model is viewed with suspicion.</p>
+<hr />
+<h2 id="3-the-magic-trick-the-core-mechanism">3. The "Magic Trick" (The Core Mechanism)</h2>
+<p>The entire paper hinges on <strong>one structural insight</strong>:</p>
+<pre><code>A KV cache is USELESS if its parent LoRA is not in GPU memory.
+</code></pre>
+<p>vLLM manages LoRAs and KV caches with separate LRU lists. This creates "orphan" KV caches—blocks sitting in GPU memory that no query can use because their LoRA was evicted. The paper claims <strong>42.4% of vLLM's KV cache space is wasted</strong> this way.</p>
+<p><strong>The fix is embarrassingly simple:</strong> Build a tree where:
+- Layer 1: Virtual root
+- Layer 2: All LoRA nodes<br />
+- Layer 3+: KV cache nodes (children of their LoRA)</p>
+<p><strong>Enforce one rule:</strong> Only evict leaf nodes. Only load root nodes.</p>
+<p>This guarantees that every KV cache in GPU memory has its required LoRA also present. It's a topological constraint that eliminates the coordination problem between two separate caches.</p>
+<p><strong>The cost model (Equation 6)</strong> is secondary machinery that decides <em>which</em> leaf to evict:</p>
+<pre><code>Eval_i = min(1, CurrentLoRACount/ExpectedLoRACount) × swap_cost × visit_freq × (1-sigmoid(time))
+</code></pre>
+<p>The first term penalizes evicting LoRAs when you're below expected demand. The rest is standard caching heuristics (cost, frequency, recency).</p>
+<hr />
+<h2 id="4-the-skeleton-in-the-closet-what-they-didnt-tell-you">4. The "Skeleton in the Closet" (What They Didn't Tell You)</h2>
+<h3 id="the-baseline-is-misconfigured">The Baseline is Misconfigured</h3>
+<p>Figure 19 reveals that vLLM's performance varies <em>dramatically</em> with the LoRA allocation ratio. They test ratios from 0.05 to 0.5, and the optimal varies by workload. Yet throughout the paper, they compare against vLLM with a <strong>fixed 0.2 ratio</strong>. The "45.7% improvement" headline is inflated by vLLM's bad default config.</p>
+<p>To their credit, Section VIII-J compares against "oracle vLLM" (brute-force optimal ratio) and ELORA still wins by 38.7%. But this comparison is buried, and they never test against a simple <em>dynamic</em> rebalancing heuristic.</p>
+<h3 id="the-cost-model-weights-are-never-justified">The Cost Model Weights Are Never Justified</h3>
+<p>Equation 5 multiplies three terms: <code>cost × visit × (1-sigmoid(t))</code>. Are these equally weighted? Did they tune these weights? The paper never says. As one expert noted: "This smells like 'we tried a few things and this worked.'"</p>
+<h3 id="the-100ms-decision-interval-is-suspicious">The 100ms Decision Interval is Suspicious</h3>
+<p>The cache swapper runs every 100ms. For a system claiming to optimize TTFT (which they reduce to ~200-400ms), this means:
+- Best case: Decision made just before query arrives
+- Worst case: Query waits 100ms for the next decision cycle</p>
+<p>Why 100ms? Why not adaptive? This seems like engineering convenience, not a principled choice.</p>
+<h3 id="sglang-is-conveniently-excluded">SGLang is Conveniently Excluded</h3>
+<p>They claim SGLang has "implementation issues" with 9568ms TTFT, citing a GitHub issue. But SGLang is a major system. Either they misconfigured it, or there's a bug they should have reported upstream. The dismissal is too convenient.</p>
+<h3 id="no-beam-search-speculative-decoding">No Beam Search / Speculative Decoding</h3>
+<p>They assume greedy decoding. With beam search, multiple beams diverge and need different KV cache subsets. Their tree structure would need to handle branching <em>within</em> a single request. This limitation is never acknowledged.</p>
+<hr />
+<h2 id="5-the-verdict-why-this-matters">5. The Verdict (Why This Matters)</h2>
+<p><strong>Why we're reading this:</strong> This paper identifies a <em>real</em> inefficiency in production LLM serving systems. The "invalid KV cache" problem is not theoretical—42% waste is brutal. The dependency tree solution is elegant and has near-zero overhead.</p>
+<p><strong>What to take away:</strong>
+1. <strong>The insight is worth stealing:</strong> If you're building LLM serving systems, track LoRA-KV dependencies. This is a simple reference-counting problem that existing systems ignore.
+2. <strong>The implementation is over-engineered:</strong> The cost model will not survive contact with production traffic. A two-level LRU with admission control would likely achieve 60-80% of the benefit with 20% of the complexity.
+3. <strong>The 45.7% number is marketing:</strong> Expect 15-25% improvement in production with diverse workloads. Still valuable, but not revolutionary.</p>
+<p><strong>The meta-lesson:</strong> This paper is a good example of how systems papers package incremental-but-useful ideas. The core insight (dependency tracking) is one paragraph. The rest is machinery (cost model, tree implementation, evaluation) that makes it publishable. When reading systems papers, always ask: "What's the one invariant that makes this work?" Here, it's "evict leaves only."</p>
+<p><strong>For your own research:</strong> If you find yourself building complex cost models with multiple heuristic terms, step back and ask if a simpler structural constraint could achieve the same goal. ELORA's tree invariant is more robust than its cost model—one is a correctness property, the other is a prediction that can be wrong.</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-kv-1-de-1--chief-architect-review">
+                    <h3>Chief Architect Review</h3>
+                    <div class="review-content"><h2 id="executive-summary-the-elevator-pitch-translation">Executive Summary: The "Elevator Pitch" Translation</h2>
+<p><strong>In industry terms, you are proposing:</strong> A unified memory management system that treats LoRA adapters and KV caches as a single resource pool with explicit dependency tracking, trading off management complexity for reduced cold-start latency in multi-tenant fine-tuned LLM serving.</p>
+<p><strong>The Kernel of the Idea (stripped of academic wrapper):</strong>
+1. <strong>Dependency-Aware Eviction:</strong> A LoRA and its KV caches form a usage dependency—evicting a LoRA invalidates all its cached KVs. Current systems ignore this, wasting 42% of GPU memory on "orphaned" KV caches.
+2. <strong>Unified Pool with Cost-Based Swapping:</strong> Instead of static partitioning (X% for LoRAs, Y% for KVs), dynamically allocate based on a cost model that considers swap latency, access frequency, and required LoRA count.</p>
+<hr />
+<h2 id="the-roi-check-is-this-shippable">The ROI Check: Is This Shippable?</h2>
+<h3 id="what-they-claim-vs-what-i-believe">What They Claim vs. What I Believe</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Paper Claim</th>
+<th>My Adjusted Estimate</th>
+<th>Reasoning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TTFT Reduction</td>
+<td>45.7% avg</td>
+<td><strong>15-25% in production</strong></td>
+<td>Simulator artifacts, idealized traces, no real multi-tenant interference</td>
+</tr>
+<tr>
+<td>TPOT Reduction</td>
+<td>37.8% avg</td>
+<td><strong>10-15%</strong></td>
+<td>Decode-bound workloads won't see this; prefill savings are real but smaller</td>
+</tr>
+<tr>
+<td>Peak Load Improvement</td>
+<td>78.9%</td>
+<td><strong>30-40%</strong></td>
+<td>Assumes perfect cost model predictions; real workloads have burstier patterns</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why the discount?</strong>
+- Their traces (LMSYS-33K, OPUS-100) are academic benchmarks, not production traffic with adversarial patterns
+- The 100ms cost model update interval is suspiciously convenient—real systems need sub-ms decisions under load
+- No mention of tail latency under memory pressure (P99.9), which is what SLAs actually care about</p>
+<h3 id="the-areacomplexity-tax">The Area/Complexity Tax</h3>
+<p><strong>What they're adding:</strong>
+- A trie-based dependency tree (676KB max, CPU-resident) — <strong>Acceptable</strong>
+- Per-block metadata: 232 bytes/16MB block — <strong>Negligible</strong>
+- Cost model computation: "up to 3.1μs" — <strong>Suspicious.</strong> This is per-block. With 10K blocks, that's 31ms. They're hiding something.</p>
+<p><strong>What they're NOT telling you:</strong>
+1. <strong>Memory fragmentation:</strong> Unified pools with variable-size LoRAs (rank 32 vs 64) will fragment. They partition along rank dimension but don't discuss compaction overhead.
+2. <strong>Coherence with Tensor Parallelism:</strong> They use TP across 8 GPUs. How does the dependency tree stay consistent across ranks? One sentence: "It uses Tensor Parallelism." That's not an answer.
+3. <strong>Interaction with continuous batching:</strong> Their cost model assumes batch composition is predictable. Under Orca-style continuous batching, the batch changes every iteration.</p>
+<hr />
+<h2 id="the-refactoring-what-i-would-actually-ship">The "Refactoring": What I Would Actually Ship</h2>
+<h3 id="strip-it-down-to-the-core">Strip It Down to the Core</h3>
+<p><strong>Keep:</strong>
+1. <strong>The dependency invariant:</strong> Never evict a LoRA while its KVs are resident. This is a simple reference-counting scheme, not a tree. Each LoRA has a <code>kv_refcount</code>. Evict KVs first (decrement), then LoRA (when refcount=0).
+2. <strong>Unified memory pool:</strong> Yes, this is correct. vLLM's static partitioning is obviously wrong for dynamic workloads. But this is already in S-LoRA's design—they just didn't combine it with KV caching.</p>
+<p><strong>Discard:</strong>
+1. <strong>The complex cost model (Eq. 6):</strong> Replace with a two-level LRU:
+   - Level 1: LRU across LoRAs (coarse-grained)
+   - Level 2: LRU within each LoRA's KV subtree (fine-grained)
+   - Add a "pinning" mechanism for LoRAs with active requests
+2. <strong>The "LoRA quantity estimation" (Eq. 3-4):</strong> This is over-engineered. Just use a simple admission control: if GPU memory &lt; 80%, admit new LoRAs; if &gt; 90%, start evicting. The sigmoid-based time decay is LSTM-inspired nonsense for a caching problem.</p>
+<p><strong>Why this works:</strong>
+- Reference counting is verifiable (no non-determinism)
+- Two-level LRU is standard practice (see CPU cache hierarchies)
+- Admission control is what every production system uses (see Memcached, Redis)</p>
+<hr />
+<h2 id="the-hard-questions">The Hard Questions</h2>
+<h3 id="1-how-does-this-interact-with-dvfs">1. How does this interact with DVFS?</h3>
+<p><strong>Not addressed.</strong> When the GPU throttles under thermal pressure, swap bandwidth drops. Their cost model assumes constant PCIe bandwidth. In a real datacenter with shared PCIe switches, you're competing with NVMe traffic.</p>
+<h3 id="2-how-does-this-interact-with-virtualizationmig">2. How does this interact with virtualization/MIG?</h3>
+<p><strong>Not addressed.</strong> If I'm running this on an H100 with MIG partitions, each partition has isolated memory. Their "unified pool" assumption breaks. Multi-tenant isolation is table stakes for cloud deployment.</p>
+<h3 id="3-what-about-security-enclaves">3. What about security enclaves?</h3>
+<p><strong>Not addressed.</strong> If LoRA-A belongs to Customer-A and LoRA-B belongs to Customer-B, can the dependency tree leak information about access patterns? The tree structure itself is a side channel.</p>
+<h3 id="4-what-happens-when-the-cost-model-is-wrong">4. What happens when the cost model is wrong?</h3>
+<p><strong>Not addressed.</strong> Their Eq. 6 has four tunable parameters (implicit in the sigmoid, frequency weighting, etc.). How do you tune these in production? What's the feedback loop? If the model mispredicts, you get cascading evictions.</p>
+<h3 id="5-verification-complexity">5. Verification complexity</h3>
+<p><strong>The killer question:</strong> Their dependency tree introduces ordering constraints on eviction. How do you verify that the tree never enters an inconsistent state under concurrent access? They mention "efficient trie tree similar to SGLang" but SGLang's radix tree doesn't have the LoRA dependency constraint. This is a new invariant that needs formal verification or at least extensive fuzzing.</p>
+<hr />
+<h2 id="the-verdict-conditional-ship">The Verdict: Conditional Ship</h2>
+<p><strong>The Bet:</strong> The insight that LoRA-KV dependencies cause 40%+ memory waste is real and valuable. This is worth pursuing.</p>
+<p><strong>The Risk:</strong> The implementation is over-engineered. The cost model will not survive contact with production traffic. The verification story is incomplete.</p>
+<p><strong>My Recommendation:</strong>
+1. <strong>Phase 1 (Next Stepping):</strong> Implement reference-counted eviction with unified pool. This gets you 60% of the benefit with 20% of the complexity. Ship in 6 months.
+2. <strong>Phase 2 (If Phase 1 validates):</strong> Add lightweight cost model (frequency + recency only, no sigmoid nonsense). A/B test against Phase 1.
+3. <strong>Never Ship:</strong> The full Eq. 6 cost model. It's a research artifact.</p>
+<p><strong>Bottom Line:</strong> The paper identifies a real problem (invalid KV caches) and proposes a reasonable solution direction (dependency tracking). But the specific implementation is too complex for production. Extract the insight, build a simpler system, and verify it properly. The 45% TTFT reduction claim is marketing; expect 15-25% in reality, which is still worth the engineering investment if the complexity is managed.</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-kv-1-de-1--deep-learnging-and-ai-hardware-inference-review">
+                    <h3>Deep Learnging And Ai Hardware Inference Review</h3>
+                    <div class="review-content"><h1 id="elora-paper-deconstruction">ELORA Paper Deconstruction</h1>
+<h2 id="the-no-bs-summary">The "No-BS" Summary</h2>
+<p>This paper addresses a real operational problem in multi-tenant LLM serving: when you're running one base model (like Llama) with dozens of LoRA adapters for different users/tasks, and you want to reuse KV caches across conversation turns, the current systems (vLLM, S-LoRA) are terrible at managing GPU memory. The core issue is that <strong>a KV cache is useless if its corresponding LoRA isn't loaded</strong> — they call these "invalid KV caches" — and existing systems manage LoRAs and KV caches in separate memory pools with no awareness of this dependency. ELORA fixes this with (1) a tree structure that tracks which KV caches belong to which LoRAs, ensuring you never cache KVs for a swapped-out LoRA, and (2) a cost model that decides what to evict/prefetch based on expected TTFT impact rather than simple LRU.</p>
+<hr />
+<h2 id="the-core-mechanism-a-whiteboard-explanation">The Core Mechanism: A Whiteboard Explanation</h2>
+<p><strong>The Problem Setup:</strong>
+Imagine you have 50 LoRA adapters, each ~200MB. Your GPU has 80GB, the base model takes 16GB, and you need space for running KV caches during inference. You also want to cache <em>history</em> KV caches so returning users don't recompute their conversation context.</p>
+<p>vLLM's approach: "Let's allocate 20% of remaining memory for LoRAs, 80% for KV caches, and manage them separately with LRU."</p>
+<p><strong>Why this fails:</strong>
+- If LoRA-7 gets evicted but its KV caches stay cached, those KV caches are <em>dead weight</em> — no query can use them until LoRA-7 is reloaded.
+- The 20/80 split is static. If suddenly 40 LoRAs are "hot" instead of 10, you're screwed.
+- LRU doesn't account for the <em>cost</em> of evicting something (a 500MB LoRA hurts more to reload than a 2MB KV block).</p>
+<p><strong>ELORA's Solution:</strong></p>
+<ol>
+<li><strong>Unified Memory Pool + Dependency Tree:</strong></li>
+<li>All LoRAs and KV caches share the same memory pool (same block size).</li>
+<li>A tree structure: Virtual root → LoRA nodes (layer 2) → KV cache nodes (children of their LoRA).</li>
+<li><strong>Key invariant:</strong> You can only evict <em>leaf nodes</em>. If you evict a LoRA, all its KV children must go first. This guarantees no "orphan" KV caches.</li>
+</ol>
+<p><code>Root (virtual)
+   ├── LoRA-1
+   │   ├── KV1-1 (prefix "Hello")
+   │   │   └── KV1-2 (prefix "Hello, how")
+   │   └── KV1-3 (prefix "Hi there")
+   ├── LoRA-2
+   │   └── KV2-1
+   ...</code></p>
+<ol>
+<li><strong>Cost Model for Eviction/Prefetch:</strong>
+   Instead of LRU, they compute an <code>Eval_i</code> score for each node:</li>
+</ol>
+<p><code>Eval_i = LoRA_Eval_i × Retain_Eval_i</code></p>
+<p>Where:
+   - <code>LoRA_Eval_i = min(1, CurrentLoRACount / ExpectedLoRACount)</code> — penalizes evicting LoRAs if you're already below the expected number needed for the current workload.
+   - <code>Retain_Eval_i = swap_cost × visit_frequency × (1 - sigmoid(time_since_last_use))</code> — combines transfer cost, popularity, and recency.</p>
+<p><strong>Eviction:</strong> Sort leaf nodes by ascending <code>Eval_i</code>, evict lowest first.
+   <strong>Prefetch:</strong> When GPU memory is &lt;70% utilized, swap in root nodes (LoRAs or top-level KVs) with highest <code>Eval_i</code>.</p>
+<ol>
+<li><strong>Asynchronous Swapping:</strong>
+   They overlap PCIe transfers with inference using CUDA streams. A query waiting for its LoRA doesn't block other queries.</li>
+</ol>
+<hr />
+<h2 id="the-critique">The Critique</h2>
+<h3 id="why-it-got-accepted-the-strengths">Why It Got Accepted (The Strengths)</h3>
+<ol>
+<li>
+<p><strong>Real Problem, Real Traces:</strong> They use actual production traces (LMSYS-33K for chatbots, Azure Function traces for arrival patterns). The 42.4% invalid KV cache stat from vLLM is damning and believable.</p>
+</li>
+<li>
+<p><strong>Clean Abstraction:</strong> The dependency tree is elegant. It's a simple invariant (evict leaves only) that automatically prevents the invalid-KV problem without complex bookkeeping.</p>
+</li>
+<li>
+<p><strong>Comprehensive Evaluation:</strong> They test 3 base models × 3 LoRA counts × 3 workloads = 27 configurations. They show TTFT, TPOT, <em>and</em> peak load. They compare against vLLM and S-LoRA (the actual systems people use).</p>
+</li>
+<li>
+<p><strong>Ablation Studies:</strong> Figures 15-16 systematically disable each component (dependency tree, cost model, individual cost model terms) and show they all matter. This is good science.</p>
+</li>
+<li>
+<p><strong>The 45.7% TTFT reduction is substantial</strong> and the methodology to achieve it (eliminating invalid caches + smarter eviction) is sound.</p>
+</li>
+</ol>
+<h3 id="where-its-weak-the-skeleton-in-the-closet">Where It's Weak (The Skeleton in the Closet)</h3>
+<ol>
+<li><strong>The "Oracle vLLM" Comparison is Weak:</strong></li>
+<li>
+<p>Figure 19 shows ELORA beats vLLM even with the <em>optimal</em> static memory partition. But they only test ratios in 0.05 increments. What if the optimal is 0.17? More importantly, they compare against a <em>static</em> oracle — a fairer comparison would be vLLM with <em>dynamic</em> rebalancing (even if naive, like "rebalance every 10 seconds based on recent LoRA distribution").</p>
+</li>
+<li>
+<p><strong>Cost Model Coefficients are Suspiciously Absent:</strong></p>
+</li>
+<li>
+<p>Equation 5 just multiplies <code>cost × visit × (1-sigmoid(t))</code>. Are these equally weighted? Did they tune these weights? The paper never says. This smells like "we tried a few things and this worked."</p>
+</li>
+<li>
+<p><strong>The "Expected LoRA Count" Estimation (Equation 3) is Hand-Wavy:</strong></p>
+</li>
+<li>
+<p>They estimate how many LoRAs are needed based on recent batch size and per-LoRA probability. But this assumes the distribution is stationary over the estimation window. What if there's a sudden shift (e.g., a viral TikTok causes everyone to use LoRA-42)? They claim 94.8% of the time they're within ±5% of the true count, but this is measured <em>on their traces</em> — it's not a guarantee.</p>
+</li>
+<li>
+<p><strong>SGLang Dismissal is Convenient:</strong></p>
+</li>
+<li>
+<p>They say SGLang has "implementation issues" and shows 9568ms TTFT, so they don't compare against it. But SGLang is a major system. Either (a) they misconfigured it, (b) SGLang genuinely can't do multi-LoRA + KV reuse, or (c) there's a bug they should have reported. The paper doesn't clarify which.</p>
+</li>
+<li>
+<p><strong>No Power/Energy Measurements:</strong></p>
+</li>
+<li>
+<p>They claim "efficiency" but only measure latency and throughput. PCIe transfers aren't free. How much does the async swapping cost in terms of power? Does ELORA's higher GPU memory utilization translate to higher power draw?</p>
+</li>
+<li>
+<p><strong>Limited LoRA Rank Diversity:</strong></p>
+</li>
+<li>
+<p>All LoRAs have rank 32 or 64. What happens with rank 128 or 256? The memory footprint scales linearly with rank, which could change the dynamics significantly.</p>
+</li>
+<li>
+<p><strong>The 1000/2000 LoRA Scalability Test (Section VIII-I) is Synthetic:</strong></p>
+</li>
+<li>They acknowledge "real-world scenarios always only have tens of LoRAs" but test with 1000-2000 anyway. The distributions (random, distinct, skewed) are artificial. This feels like padding the evaluation rather than addressing a real need.</li>
+</ol>
+<hr />
+<h2 id="contextual-fit-where-does-this-sit-in-the-literature">Contextual Fit: Where Does This Sit in the Literature?</h2>
+<ul>
+<li><strong>Builds on:</strong> S-LoRA's unified memory pool idea, SGLang's RadixAttention tree for KV prefix matching, vLLM's PagedAttention for block-based memory management.</li>
+<li><strong>Differs from:</strong> Prior work that treats LoRAs and KV caches as independent caching problems. The dependency tree is the novel contribution.</li>
+<li><strong>Related to:</strong> The broader "LLM serving systems" literature (Orca, Sarathi, DistServe) but focused specifically on the multi-adapter case.</li>
+<li><strong>Not related to:</strong> Hardware accelerator papers (this is pure systems/scheduling work).</li>
+</ul>
+<hr />
+<h2 id="discussion-questions-for-the-student">Discussion Questions for the Student</h2>
+<ol>
+<li>
+<p><strong>On the Cost Model:</strong>
+   "The cost model multiplies three terms (swap cost, visit frequency, recency) without any learned or tuned weights. How would you design an experiment to determine if these terms should be weighted differently? What if the optimal weights vary by workload?"</p>
+</li>
+<li>
+<p><strong>On the Dependency Tree Invariant:</strong>
+   "The paper enforces that you can only evict leaf nodes. But what if a LoRA has 1000 KV cache descendants and you urgently need to load a new LoRA? You'd have to evict all 1000 KV blocks first. Is there a scenario where this invariant <em>hurts</em> performance? How would you detect and handle it?"</p>
+</li>
+<li>
+<p><strong>On the Evaluation Baseline:</strong>
+   "They compare against vLLM with a static 20% LoRA allocation. But vLLM is open-source — why didn't they implement a simple dynamic rebalancing heuristic (e.g., 'if LoRA memory is &gt;90% full and KV memory is &lt;50% full, steal 10% from KV') and compare against that? Would ELORA still win?"</p>
+</li>
+<li>
+<p><strong>On Real-World Deployment:</strong>
+   "The paper assumes all LoRAs are stored in host memory and can be swapped in on demand. But in a real multi-tenant cloud, LoRAs might be stored on remote storage (S3, etc.). How would ELORA's design change if LoRA swap-in latency was 100ms instead of &lt;1ms?"</p>
+</li>
+</ol>
+<hr />
+<h2 id="final-verdict">Final Verdict</h2>
+<p>This is a <strong>solid systems paper</strong> that identifies a real inefficiency (invalid KV caches in multi-LoRA serving), proposes a clean solution (dependency tree + unified cost model), and demonstrates meaningful improvements on realistic workloads. The 45.7% TTFT reduction is not cherry-picked — it holds across multiple models and scenarios.</p>
+<p><strong>However</strong>, the cost model feels under-justified (why those specific terms? why no weights?), and the comparison against "oracle vLLM" doesn't fully close the door on simpler dynamic allocation schemes. A skeptical reviewer would ask: "How much of the gain comes from the dependency tree (which is clearly correct) vs. the cost model (which is heuristic)?" The ablation in Figure 15 suggests both matter, but the cost model's contribution (1.42× TTFT increase when removed) is smaller than the dependency tree's (1.51×).</p>
+<p><strong>For your research:</strong> If you're working on LLM serving, the dependency tree idea is worth stealing. If you're working on caching policies, the cost model is a starting point but probably needs refinement (maybe learned weights, maybe RL-based eviction).</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-kv-1-de-1--dr-microarch-reader-review">
+                    <h3>Dr Microarch Reader Review</h3>
+                    <div class="review-content"><h1 id="elora-architectural-deconstruction">ELORA: Architectural Deconstruction</h1>
+<h2 id="the-whiteboard-explanation">The Whiteboard Explanation</h2>
+<p>Let me walk you through what this paper actually builds, stripped of the marketing language.</p>
+<p><strong>The Core Problem:</strong> You have one big frozen LLM (the "base model") sitting in GPU memory, plus many small LoRA adapters (low-rank matrix pairs) and their associated KV caches. The GPU memory is finite. When a query arrives needing LoRA-7 and its prefix KV cache, but LoRA-7 was evicted to make room for LoRA-3's KV cache, you're stuck waiting for PCIe transfers.</p>
+<p><strong>The Data Flow:</strong></p>
+<ol>
+<li>
+<p><strong>Unified Memory Pool:</strong> Instead of vLLM's approach of statically partitioning GPU memory into "LoRA region" (20%) and "KV cache region" (80%), ELORA treats everything as fixed-size memory blocks (they extend S-LoRA's block allocator). LoRAs are sliced along the rank dimension to fit the same block size as KV cache blocks.</p>
+</li>
+<li>
+<p><strong>The Dependency Tree:</strong> Here's the actual structure:</p>
+</li>
+</ol>
+<pre><code>        [Virtual Root]
+           /    \
+      LoRA-1   LoRA-2   ...  (Layer 2: all LoRAs)
+        /         \
+    KV1-1       KV2-1        (Prefix KV blocks)
+      |           |
+    KV1-2       KV2-2
+      |
+    KV1-3  ...
+</code></pre>
+<p>Each node is a memory block address. The tree is stored in CPU memory (max ~676KB) as a trie structure. Edges represent "you can't use this child without the parent being loaded."</p>
+<ol>
+<li>
+<p><strong>Eviction Rule:</strong> Only evict leaf nodes from GPU. Only swap-in root nodes from main memory. This maintains tree connectivity and ensures no "orphan" KV caches exist without their parent LoRA.</p>
+</li>
+<li>
+<p><strong>The Cost Function:</strong> For each node <em>i</em>:</p>
+</li>
+</ol>
+<pre><code>Eval_i = LoRA_Eval_i × Retain_Eval_i
+
+LoRA_Eval_i = min(1, NowLoRA_i / LowLoRA)
+Retain_Eval_i = cost_i × visit_i × (1 - sigmoid(t_i))
+</code></pre>
+<p>Where <code>LowLoRA</code> is estimated from recent batch statistics using a probabilistic formula (Equation 3).</p>
+<hr />
+<h2 id="the-aha-moment">The 'Aha!' Moment</h2>
+<p>The clever insight is <strong>treating the LoRA-to-KV dependency as a tree invariant that must be maintained during eviction</strong>.</p>
+<p>Previous systems (vLLM) managed LoRAs and KV caches with separate LRU lists. This creates "invalid" KV caches—blocks sitting in GPU memory that are useless because their parent LoRA was evicted. The paper claims vLLM suffers from <strong>42.4% invalid KV caches</strong> on average.</p>
+<p>By enforcing "evict from leaves only," ELORA guarantees that every KV cache in GPU memory has its required LoRA also present. This is a simple topological constraint, but it eliminates the coordination problem between two separate caches.</p>
+<p>The second insight is the <code>LoRA_Eval</code> term that acts as a "soft floor" on LoRA count. They estimate how many distinct LoRAs the current workload needs (using the probability that at least one query in a batch uses LoRA <em>i</em>), then penalize eviction decisions that would drop below this threshold.</p>
+<hr />
+<h2 id="the-skeptics-check">The Skeptic's Check</h2>
+<p><strong>1. The "Unified Pool" Overhead:</strong>
+They claim minimal overhead, but look at the implementation details:
+- LoRAs are partitioned along the rank dimension to match KV block sizes
+- This means a rank-64 LoRA with 8B parameters gets sliced into many small blocks
+- Each block needs metadata (232 bytes per 16MB block = 0.0014%)</p>
+<p>The metadata overhead is indeed tiny, but the <strong>fragmentation</strong> of LoRAs across non-contiguous blocks isn't discussed. When you load a LoRA, you're now doing scattered reads across the block pool. They use asynchronous PCIe transfers to hide this, but the latency for a full LoRA swap-in could be worse than a contiguous transfer.</p>
+<p><strong>2. The Cost Model Assumptions:</strong>
+- <code>visit_i</code> (visit frequency) is "obtained from recorded data on the dependency tree"—but how much history? They don't specify the window size.
+- The sigmoid decay for LRU: <code>(1 - sigmoid(t_i))</code> assumes a specific temporal locality pattern. What if access patterns are bursty rather than smooth?
+- They claim 94.8% of the time the loaded LoRA count is within ±5% of <code>LowLoRA</code>, but this is a self-fulfilling metric—the system is optimizing for it.</p>
+<p><strong>3. The Tree Update Latency:</strong>
+They claim "less than 0.5ms" for tree matching/updating and "within 5ms" for swap decisions. But:
+- Tree operations are on CPU
+- Swap decisions happen every 100ms
+- What happens if a burst of 50 queries arrives in 10ms, each needing different LoRAs?</p>
+<p>The 100ms decision interval is coarse. Between intervals, queries queue waiting for the next swap decision cycle.</p>
+<p><strong>4. The Baseline Comparison:</strong>
+They compare against vLLM with a <strong>fixed 0.2 LoRA ratio</strong>. Figure 19 shows vLLM's performance varies significantly with this ratio. The "oracle" vLLM (best static ratio found by brute-force) is still 38.7% worse than ELORA on TTFT—but this oracle requires offline profiling per workload. A fairer comparison would be against vLLM with adaptive ratio tuning.</p>
+<p><strong>5. Hardware Reality:</strong>
+- PCIe 5.0 at 128GB/s sounds fast, but they're using H800s with 80GB each
+- A rank-64 LoRA for Llama3-8B is ~50-100MB
+- Swap-in time: ~0.4-0.8ms per LoRA (matches their "up to 0.47ms" claim)
+- But they're running 8 GPUs with tensor parallelism—are swaps coordinated across GPUs? The paper doesn't discuss this.</p>
+<hr />
+<h2 id="discussion-question">Discussion Question</h2>
+<p><strong>Ask yourself:</strong> The paper assumes PCIe bandwidth is the bottleneck for cold starts. But what happens when you scale to 100+ LoRAs with high request rates?</p>
+<p>At some point, the CPU becomes the bottleneck:
+- Tree traversal for prefix matching (DFS per query)
+- Cost model evaluation for all nodes every 100ms
+- Metadata bookkeeping for thousands of blocks</p>
+<p>The paper shows results up to 2000 LoRAs (Section VIII-I), but the CPU overhead analysis is suspiciously absent. With 2000 LoRAs and deep KV trees, how many nodes are we evaluating? If each LoRA has 10 KV prefix nodes on average, that's 20,000 nodes to score every 100ms.</p>
+<p><strong>The deeper question:</strong> Is the tree structure the right abstraction? A LoRA's KV caches form a tree because of prefix sharing, but the LoRA itself is a flat object. The paper grafts LoRAs onto layer 2 of a KV tree, but this conflates two different dependency types:
+1. KV prefix dependencies (structural, from token sequences)
+2. LoRA-KV dependencies (semantic, from model architecture)</p>
+<p>Would a two-level cache hierarchy (LoRA cache + per-LoRA KV cache) with coordinated eviction policies achieve similar results with simpler bookkeeping?</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-kv-1-de-1--kv-cache-compression-and-paged-memory-management-for-llms-review">
+                    <h3>Kv Cache Compression And Paged Memory Management For Llms Review</h3>
+                    <div class="review-content"><h1 id="deconstruction-of-elora-efficient-lora-and-kv-cache-management-for-multi-lora-llm-serving">Deconstruction of "ELORA: Efficient LoRA and KV Cache Management for Multi-LoRA LLM Serving"</h1>
+<h2 id="the-no-bs-summary">The "No-BS" Summary</h2>
+<p>This paper tackles a real but narrow problem: when you're serving an LLM with <em>multiple</em> LoRA adapters (think: one base model, 50+ task-specific fine-tunes), the current systems like vLLM stupidly partition GPU memory into "LoRA space" and "KV-cache space" with a fixed ratio. When the workload shifts—suddenly more users want translation LoRAs instead of chatbot LoRAs—you're stuck with the wrong allocation. Worse, you end up caching KV blocks for LoRAs that aren't even loaded in GPU memory, which is useless ("invalid KV caches"). </p>
+<p>ELORA's fix: (1) treat LoRAs and KV-caches as nodes in a unified tree structure that encodes their <em>usage dependencies</em> (you can't use a KV-cache if its parent LoRA isn't loaded), and (2) use a cost model to decide what to evict/prefetch based on expected TTFT benefit, not just LRU. They claim 45.7% TTFT reduction over vLLM.</p>
+<hr />
+<h2 id="the-core-mechanism-a-whiteboard-explanation">The Core Mechanism: A Whiteboard Explanation</h2>
+<p><strong>The Problem Setup:</strong>
+Imagine you run a hotel (GPU memory) with two wings: one for "VIP guests" (LoRAs) and one for "their luggage" (KV-caches). The hotel manager (vLLM) decided years ago that 20% of rooms go to VIPs and 80% to luggage. But today, a convention arrives with 50 VIPs and minimal luggage. You're stuck turning away VIPs while luggage rooms sit empty. Worse, some luggage belongs to VIPs who already checked out—it's just taking up space.</p>
+<p><strong>ELORA's Solution:</strong></p>
+<ol>
+<li><strong>Unified Pool + Dependency Tree:</strong></li>
+<li>Tear down the wall between wings. All rooms are now fungible.</li>
+<li>Build a "family tree" where the root is virtual, the second layer is LoRAs, and children are KV-cache blocks for that LoRA's tokens. A KV-cache node is only "valid" if its parent LoRA is in GPU memory.</li>
+<li>
+<p><strong>Key insight:</strong> When evicting, always evict <em>leaves</em> first (deepest KV-cache blocks). When loading, always load <em>roots</em> first (LoRAs before their KV-caches). This guarantees you never have orphaned luggage.</p>
+</li>
+<li>
+<p><strong>Cost Model for Eviction/Prefetch:</strong></p>
+</li>
+<li>Instead of dumb LRU, score each node by:
+     <code>Eval_i = LoRA_Eval_i × Retain_Eval_i</code></li>
+<li><code>LoRA_Eval_i</code>: A "soft penalty" that encourages keeping <em>enough</em> LoRAs loaded. If you're below the expected number of LoRAs needed (estimated from recent batch composition), this term boosts LoRA retention.</li>
+<li><code>Retain_Eval_i</code>: Classic stuff—swap cost × visit frequency × time-decay (LRU-ish). Higher score = more valuable to keep.</li>
+<li>Every 100ms, re-score everything. Evict lowest-scoring leaves when full; prefetch highest-scoring roots when idle.</li>
+</ol>
+<p><strong>The "Aha" Moment:</strong>
+The tree structure isn't just bookkeeping—it <em>enforces</em> the invariant that you never waste GPU memory on KV-caches whose LoRA is swapped out. This is the "usage dependency" they keep hammering. It's simple but effective.</p>
+<hr />
+<h2 id="the-critique-strengths-weaknesses">The Critique: Strengths &amp; Weaknesses</h2>
+<h3 id="why-it-got-in-the-strong-insight">Why It Got In (The Strong Insight)</h3>
+<ol>
+<li><strong>The "Invalid KV Cache" Problem is Real:</strong></li>
+<li>They show vLLM wastes 42.4% of KV-cache space on average because it doesn't track LoRA-KV dependencies. That's a brutal inefficiency.</li>
+<li>
+<p>The tree-based dependency tracking is elegant and has near-zero overhead (sub-millisecond operations, &lt;1MB metadata).</p>
+</li>
+<li>
+<p><strong>Unified Memory Pool is Overdue:</strong></p>
+</li>
+<li>
+<p>S-LoRA already did unified memory for LoRAs + <em>running</em> KV-caches, but didn't handle <em>history</em> KV-cache reuse. ELORA closes that gap.</p>
+</li>
+<li>
+<p><strong>The Cost Model is Sensible:</strong></p>
+</li>
+<li>
+<p>Combining swap cost, frequency, and LRU is standard, but the <code>LoRA_Eval</code> term that penalizes under-provisioning LoRAs is a nice touch for this specific workload.</p>
+</li>
+<li>
+<p><strong>Solid Evaluation Breadth:</strong></p>
+</li>
+<li>Three models (8B, 34B, 70B), three scenarios (chatbot, translation, agents), three LoRA counts (20, 50, 100). They even tested on NPUs. The 45.7% TTFT reduction is consistent.</li>
+</ol>
+<h3 id="where-it-is-weak-the-skeleton-in-the-closet">Where It Is Weak (The Skeleton in the Closet)</h3>
+<ol>
+<li><strong>Baseline Selection is Generous:</strong></li>
+<li>They compare against vLLM with a <em>fixed</em> 20% LoRA allocation ratio. But then in Section VIII-J, they admit that even with <em>oracle</em> (brute-force optimal) allocation, vLLM is still 38.7% worse. This is good for ELORA, but it also means the "45.7% improvement" headline is inflated by vLLM's bad default config.</li>
+<li>
+<p>SGLang is dismissed due to "implementation issues" (9.5s TTFT). That's suspicious—SGLang is a serious system. Did they try to fix it? Did they contact the authors?</p>
+</li>
+<li>
+<p><strong>Workload Assumptions:</strong></p>
+</li>
+<li>The traces (LMSYS-33K, OPUS-100, Taskmaster) are stitched together with Azure Function traces for arrival patterns. This is standard practice, but it means the "dynamic LoRA distribution" is synthetic. Real multi-tenant LoRA workloads might have different characteristics (e.g., correlated bursts, adversarial users).</li>
+<li>
+<p>They assume LoRAs are interchangeable in terms of compute cost (same rank, same overhead). In practice, LoRA ranks vary (8 to 256), and some LoRAs might have different target modules.</p>
+</li>
+<li>
+<p><strong>The Cost Model is Heuristic, Not Learned:</strong></p>
+</li>
+<li>
+<p>Equation 6 is hand-tuned. They don't compare against learned eviction policies (e.g., LeCaR, HALP-style learned components). The HALP comparison in Fig. 17 shows ELORA wins, but HALP was designed for CDN caching, not LLM serving—it's not a fair fight.</p>
+</li>
+<li>
+<p><strong>No Beam Search / Speculative Decoding:</strong></p>
+</li>
+<li>
+<p>They assume greedy decoding. With beam search, multiple beams diverge and need different KV-cache subsets. Their tree structure would need to handle branching <em>within</em> a single request, not just across requests. This is acknowledged nowhere.</p>
+</li>
+<li>
+<p><strong>Latency Breakdown is Incomplete:</strong></p>
+</li>
+<li>
+<p>Fig. 12 shows queue/LoRA-cold-start/KV-cold-start breakdown, but doesn't isolate the <em>cost model computation overhead</em>. They claim 3.1µs per <code>Eval_i</code> update, but with thousands of nodes, that's milliseconds per 100ms interval. Is this pipelined with inference?</p>
+</li>
+<li>
+<p><strong>Memory Overhead Claim is Misleading:</strong></p>
+</li>
+<li>
+<p>They say 232 bytes per 16MB block (0.0014%). But the tree structure itself (trie with pointers, hash values, etc.) is stored in host memory. They claim "max 676.5KB"—but for how many nodes? With 70B model and 100 LoRAs, how does this scale?</p>
+</li>
+<li>
+<p><strong>No Comparison to Prefix-Caching Optimizations:</strong></p>
+</li>
+<li>vLLM's prefix-caching (which they use as a baseline) is itself a form of KV-cache reuse. How does ELORA's tree compare to RadixAttention's trie in SGLang? They claim SGLang doesn't work with Multi-LoRA, but that's an implementation bug, not a fundamental limitation.</li>
+</ol>
+<hr />
+<h2 id="discussion-questions-for-the-student">Discussion Questions (For the Student)</h2>
+<ol>
+<li>
+<p><strong>On the Cost Model:</strong></p>
+<blockquote>
+<p>"The <code>LoRA_Eval</code> term (Eq. 4) uses <code>min(1, NowLoRA / LowLoRA)</code> to encourage loading enough LoRAs. But what happens when <code>LowLoRA</code> is underestimated (e.g., a sudden burst of requests for rare LoRAs)? Does the system thrash by evicting KV-caches to make room for LoRAs, only to evict those LoRAs moments later?"</p>
+</blockquote>
+</li>
+<li>
+<p><strong>On the Tree Structure:</strong></p>
+<blockquote>
+<p>"The paper says eviction always starts from leaves and loading starts from roots. But what if a 'hot' KV-cache block is deep in the tree (many tokens into a conversation), and its parent LoRA is cold? Do you evict the hot KV-cache just because its LoRA is being evicted? How do you handle the case where the same prefix is shared across multiple LoRAs (e.g., system prompts)?"</p>
+</blockquote>
+</li>
+<li>
+<p><strong>On Generalization:</strong></p>
+<blockquote>
+<p>"ELORA assumes each LoRA has independent KV-caches. But recent work on 'LoRA merging' and 'LoRA composition' (e.g., LoRAHub) allows combining multiple LoRAs at inference time. How would the dependency tree handle a request that uses LoRA-1 + LoRA-2 simultaneously? Would you need a DAG instead of a tree?"</p>
+</blockquote>
+</li>
+</ol>
+<hr />
+<h2 id="contextual-fit-where-does-this-sit">Contextual Fit: Where Does This Sit?</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Foundational Work</strong></th>
+<th><strong>Relationship to ELORA</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>vLLM (PagedAttention)</strong></td>
+<td>ELORA builds on vLLM's block-based memory management but replaces static LoRA/KV partitioning with a unified pool.</td>
+</tr>
+<tr>
+<td><strong>S-LoRA</strong></td>
+<td>ELORA adopts S-LoRA's SGMV kernel for batching multi-LoRA requests, but adds history KV-cache reuse (which S-LoRA lacks).</td>
+</tr>
+<tr>
+<td><strong>SGLang (RadixAttention)</strong></td>
+<td>ELORA's dependency tree is conceptually similar to RadixAttention's prefix trie, but extended to handle LoRA nodes as a second layer.</td>
+</tr>
+<tr>
+<td><strong>FlashAttention</strong></td>
+<td>Orthogonal—ELORA is about <em>memory management</em>, not <em>attention kernel optimization</em>. They could use FlashAttention under the hood.</td>
+</tr>
+<tr>
+<td><strong>Punica</strong></td>
+<td>ELORA uses Punica's multi-LoRA serving kernels (via vLLM integration). The contribution is in caching policy, not kernel design.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom Line:</strong> This is a solid systems paper that solves a real problem (LoRA-KV dependency tracking) with a clean mechanism (the tree). The evaluation is thorough but the baselines are weak (broken SGLang, suboptimal vLLM config). The cost model is reasonable but not novel. It's a good MLSys paper, not a paradigm shift.</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-kv-1-de-1--prof-simtools-reader-review">
+                    <h3>Prof Simtools Reader Review</h3>
+                    <div class="review-content"><h1 id="dr-sims-tooling-autopsy-elora-under-the-microscope">Dr. Sim's Tooling Autopsy: ELORA Under the Microscope</h1>
+<p><em>adjusts glasses and pulls up simulation config files</em></p>
+<p>Well, well. Another paper claiming impressive speedups. Let's see what's actually running under the hood, shall we?</p>
+<hr />
+<h2 id="1-tooling-breakdown-the-simulation-stack">1. Tooling Breakdown: The Simulation Stack</h2>
+<p><strong>The Good News:</strong> They're not simulating—they're running on <em>real hardware</em>. Table II shows:
+- Intel Xeon Platinum 8480CL CPUs
+- 8× NVIDIA H800 GPUs (80GB each)
+- PCIe 5.0 @ 128GB/s</p>
+<p>This is refreshing. No Gem5 configs to scrutinize, no trace-driven approximations. They're measuring actual wall-clock time on production-class hardware.</p>
+<p><strong>The Concerning News:</strong> They implemented ELORA on top of vLLM with "7856 and 1766 lines of Python and C++ code" (Section VII). But here's my question: <strong>Where's the artifact?</strong></p>
+<p>I see no GitHub link. No Docker container. No reproducibility package. This is <em>Paperware</em> until proven otherwise. The implementation details in Section VII are hand-wavy:</p>
+<blockquote>
+<p>"We extend the BlockManager of vLLM... We utilize an efficient trie tree that is similar to SGLang..."</p>
+</blockquote>
+<p><em>Similar to</em> is not <em>the same as</em>. What modifications did they make? Did they validate their trie implementation against SGLang's? The overhead claims ("less than 0.5ms" for tree operations) need verification.</p>
+<hr />
+<h2 id="2-the-modeling-risk-whats-being-measured-vs-whats-claimed">2. The Modeling Risk: What's Being Measured vs. What's Claimed</h2>
+<h3 id="the-workload-generation-problem">The Workload Generation Problem</h3>
+<p>They construct synthetic workloads from real traces (LMSYS-33K, OPUS-100, Taskmaster) but with <strong>significant transformations</strong>:</p>
+<blockquote>
+<p>"We randomly choose the query patterns from n models... and map to n LoRAs. Like other works, we randomly select LoRAs from the HuggingFace repository... and this does not affect the serving performance."</p>
+</blockquote>
+<p><strong>Wait, what?</strong> They're claiming that the <em>specific LoRA weights</em> don't affect serving performance? This is only true if:
+1. All LoRAs have identical ranks (they mention 32 or 64)
+2. The computation time is dominated by the base model
+3. Memory access patterns are uniform across LoRAs</p>
+<p>But they never validate this assumption! Different LoRAs could have different sparsity patterns, different activation distributions. The claim "this does not affect serving performance" is cited to Punica [9], but Punica was measuring <em>batching efficiency</em>, not <em>end-to-end serving latency</em>.</p>
+<h3 id="the-timestamp-manipulation">The Timestamp Manipulation</h3>
+<p>For translation and personal agents:</p>
+<blockquote>
+<p>"As the OPUS-100 dataset lacks timestamps, we adopt query arrival patterns from the Microsoft Azure function trace (MAFT)..."</p>
+</blockquote>
+<p>They're Frankensteining two unrelated traces together. Azure function invocations have <em>completely different</em> temporal characteristics than translation requests. Function traces are bursty with cold starts; translation services have more predictable diurnal patterns. This could artificially inflate the "dynamic load" narrative that motivates their system.</p>
+<hr />
+<h2 id="3-the-impossible-physics-check">3. The "Impossible Physics" Check</h2>
+<h3 id="pcie-bandwidth-claims">PCIe Bandwidth Claims</h3>
+<p>They claim asynchronous swapping with "only up to 0.47ms" overhead (Section VI-C). Let's do the math:</p>
+<ul>
+<li>PCIe 5.0 x16: ~64 GB/s effective (128 GB/s bidirectional, but you're not getting that)</li>
+<li>A LoRA with rank 64 for Llama3-8B: roughly 8B × 64 × 2 (A and B matrices) × 2 bytes (FP16) ≈ 2GB per layer? No, that's wrong...</li>
+</ul>
+<p>Actually, LoRA matrices are <em>low-rank</em>. For a layer with dimension d=4096 and rank r=64:
+- A: d × r = 4096 × 64 × 2 bytes = 512KB
+- B: r × d = 64 × 4096 × 2 bytes = 512KB
+- Per layer: ~1MB
+- Llama3-8B has 32 layers: ~32MB per LoRA</p>
+<p>At 64 GB/s: 32MB / 64GB/s = 0.5ms. <strong>This checks out!</strong> </p>
+<p>But wait—they're also swapping KV caches. For a 2K context with 32 layers, 32 heads, 128 dim per head:
+- KV cache: 2 × 2048 × 32 × 32 × 128 × 2 bytes = 1GB</p>
+<p>At 64 GB/s: 1GB / 64GB/s = 15.6ms. That's <em>not</em> 0.47ms.</p>
+<p><strong>The 0.47ms claim must be for individual memory blocks, not full KV caches.</strong> But they don't clarify this. The paper conflates block-level and cache-level operations throughout.</p>
+<h3 id="the-100ms-monitoring-interval">The 100ms Monitoring Interval</h3>
+<p>Section VI-C states the cache swapper runs every 100ms. For a system claiming to optimize TTFT (which they reduce to ~200-400ms in many cases), a 100ms decision interval means:
+- Best case: Decision made just before query arrives
+- Worst case: Query waits 100ms for next decision cycle</p>
+<p>This could add significant variance to TTFT. Why 100ms? Why not adaptive intervals based on load? This seems like an engineering convenience, not a principled choice.</p>
+<hr />
+<h2 id="4-the-validation-gap">4. The Validation Gap</h2>
+<h3 id="missing-microbenchmarks">Missing Microbenchmarks</h3>
+<p>They never isolate the components:
+1. <strong>Tree operations alone:</strong> What's the latency distribution of insert/delete/search on the dependency tree under load?
+2. <strong>Cost model accuracy:</strong> How well does Eq. 6 predict actual TTFT improvements? They show it's <em>better than LRU</em>, but is it <em>accurate</em>?
+3. <strong>Memory fragmentation:</strong> With unified pools and variable-size LoRAs, what's the fragmentation overhead over time?</p>
+<h3 id="the-baseline-configuration-mystery">The Baseline Configuration Mystery</h3>
+<p>For vLLM, they use "GPU memory allocation ratio for LoRAs to 0.2" based on "vLLM's latest version." But vLLM's default is configurable and workload-dependent. Did they tune vLLM's ratio for each workload? Figure 19 shows vLLM's performance varies dramatically with this ratio—suggesting they may have handicapped the baseline.</p>
+<h3 id="the-sglang-dismissal">The SGLang Dismissal</h3>
+<blockquote>
+<p>"The TTFT of SGLang can be as high as 9568.9ms... This extremely low performance is similar to observations from others [19]."</p>
+</blockquote>
+<p>Reference [19] is a <em>GitHub issue</em>. They're citing a bug report as justification for excluding a major baseline. Did they try to fix it? Did they contact the SGLang team? This feels like cherry-picking baselines.</p>
+<hr />
+<h2 id="5-discussion-questions-for-the-student">5. Discussion Questions for the Student</h2>
+<ol>
+<li>
+<p><strong>Reproducibility:</strong> If you wanted to reproduce Figure 11, what information is missing from this paper? How would you obtain it?</p>
+</li>
+<li>
+<p><strong>Workload Validity:</strong> Design an experiment to test whether "randomly selecting LoRAs from HuggingFace" actually doesn't affect serving performance. What would you measure?</p>
+</li>
+<li>
+<p><strong>The Cost Model:</strong> Equation 6 combines four factors multiplicatively. Why multiplication and not addition? How would you determine the relative importance of each factor empirically?</p>
+</li>
+<li>
+<p><strong>Stress Testing:</strong> The paper shows steady-state performance. How would you design a microbenchmark to test ELORA's behavior during:</p>
+</li>
+<li>Sudden load spikes (10× queries in 1 second)</li>
+<li>LoRA popularity inversions (hot LoRA becomes cold instantly)</li>
+<li>
+<p>Memory pressure (GPU memory 99% full)</p>
+</li>
+<li>
+<p><strong>The NPU Results:</strong> Section VIII-K shows NPU results with "in-house NPUs" that have no public specifications. How much weight should you give to results on undisclosed hardware?</p>
+</li>
+</ol>
+<hr />
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p>This paper has real hardware measurements—that's good. But it suffers from:
+- <strong>No artifacts</strong> (Paperware alert)
+- <strong>Questionable workload construction</strong> (trace Frankensteining)
+- <strong>Incomplete microbenchmarking</strong> (component isolation missing)
+- <strong>Baseline configuration concerns</strong> (was vLLM properly tuned?)</p>
+<p>The core ideas (dependency-aware caching, unified memory pools) are sound. The 45.7% TTFT reduction is plausible given the inefficiencies they identify in vLLM. But I'd want to see:
+1. Open-source code
+2. Reproducibility scripts
+3. Sensitivity analysis on the cost model parameters
+4. Head-to-head comparison with properly-configured baselines</p>
+<p><em>Simulation is doomed to succeed, but real measurements can still be misleading if the experimental setup is flawed.</em></p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+                <div class="review" id="micro-1-work-1-tools-1-ca-1-kv-1-de-1--prof-workloads-reader-review">
+                    <h3>Prof Workloads Reader Review</h3>
+                    <div class="review-content"><h1 id="prof-benchs-evaluation-methodology-audit-elora-paper">Prof. Bench's Evaluation Methodology Audit: ELORA Paper</h1>
+<p><em>adjusts glasses and pulls up the paper</em></p>
+<p>Alright, let's see what we're working with here. Another paper claiming impressive speedups—45.7% TTFT reduction, 78.9% peak load improvement. These numbers are <em>suspiciously</em> round and large. Let me dig into whether they actually earned these claims.</p>
+<hr />
+<h2 id="1-methodology-audit-the-benchmark-selection">1. Methodology Audit: The Benchmark Selection</h2>
+<p><strong>What they used:</strong>
+- Three application scenarios: Chatbots (LMSYS-33k), Multi-language Translation (OPUS-100), Personal Agents (Taskmaster)
+- Three model sizes: Llama3-8B, Llama2-34B, Llama3-70B
+- Three LoRA counts: 20, 50, 100
+- Hardware: 8× NVIDIA H800 GPUs</p>
+<p><strong>The Good:</strong>
+This is actually a reasonably comprehensive setup. They didn't just pick one model size or one scenario. The use of real traces (LMSYS-33k, Azure Function Trace) rather than synthetic workloads is commendable.</p>
+<p><strong>The Concerning:</strong>
+Here's my first red flag: <em>"We randomly select LoRAs from the HuggingFace repository of the corresponding LLMs, and this does not affect the serving performance."</em></p>
+<p>Wait, what? They're claiming the actual LoRA weights don't matter? This is a <strong>bold assumption</strong> that deserves scrutiny. The LoRA rank distribution (they mention 32 or 64) affects memory footprint. If all their LoRAs happen to be similarly sized, they've created an artificially uniform workload. Real deployments might have LoRAs ranging from rank 4 to rank 256.</p>
+<hr />
+<h2 id="2-the-baseline-validity-check">2. The Baseline Validity Check</h2>
+<p><strong>Their baselines:</strong> vLLM and S-LoRA</p>
+<p><strong>The Strawman Concern:</strong>
+Look at Section III-C carefully. They tried to use SGLang but claim it had "extremely low performance" with TTFT as high as 9568.9ms, which they attribute to "poor Multi-LoRA compatibility." They then <em>conveniently</em> drop it as a baseline.</p>
+<p><em>"This extremely low performance is similar to observations from others [19]."</em></p>
+<p>Reference [19] is a GitHub issue. They're citing a bug report to justify excluding a potentially strong baseline. This is a classic move—if a competitor would beat you, find a reason to exclude them.</p>
+<p><strong>The vLLM Configuration Question:</strong>
+They set vLLM's LoRA allocation ratio to 0.2 "referring to the vLLM latest version." But look at Figure 19—they show that the <em>optimal</em> ratio varies significantly with LoRA count (from ~0.1 to ~0.3). By fixing it at 0.2, they're comparing against a <strong>misconfigured baseline</strong> for many of their test cases.</p>
+<p>To their credit, Section VIII-J does compare against "oracle vLLM" with brute-force tuned ratios. ELORA still wins by 38.7% TTFT. This is the comparison that actually matters, and they somewhat bury it.</p>
+<hr />
+<h2 id="3-the-gotcha-graphs">3. The "Gotcha" Graphs</h2>
+<p><strong>Figure 2 - The Y-axis Manipulation:</strong>
+Look at the TTFT graphs. The Y-axis goes from 0 to 9000ms in some cases. This makes their improvements look dramatic, but let me ask: what's the <em>acceptable</em> TTFT for these applications? If users consider anything under 500ms acceptable (which they use as their peak load threshold), then the difference between 200ms and 300ms is less meaningful than the graphs suggest.</p>
+<p><strong>Figure 11 - The Normalization Game:</strong>
+Notice how they present absolute values for TTFT/TPOT but then switch to "supported peak load" as a separate metric. The peak load improvements (78.9%) sound impressive, but this is defined as "maximum QPS when TTFT &lt; 500ms." This is a <strong>threshold-based metric</strong> that can be gamed. If ELORA barely keeps TTFT at 499ms while vLLM hits 501ms, that counts as infinite improvement in "supported peak load."</p>
+<p><strong>Figure 15 - The Ablation Study:</strong>
+The ablation studies (ELORA-WOM, ELORA-WOS) show 1.51X and 1.42X TTFT increases when removing components. But notice they don't show what happens when you add <em>just</em> the dependency tree to vLLM, or <em>just</em> the cost model to S-LoRA. This would reveal how much of the improvement comes from each component independently versus their interaction.</p>
+<hr />
+<h2 id="4-the-missing-data">4. The Missing Data</h2>
+<p><strong>What I would have loved to see:</strong></p>
+<ol>
+<li>
+<p><strong>Sensitivity to LoRA rank distribution:</strong> They use ranks 32 and 64. What happens with heterogeneous ranks (8, 16, 32, 64, 128) in the same deployment? Their unified memory block approach might fragment badly.</p>
+</li>
+<li>
+<p><strong>Cold start breakdown:</strong> Figure 12 shows queue/LoRA cold-start/KV cold-start breakdown, but only as averages. Where's the CDF? The P99 numbers are mentioned in passing (73.8% reduction) but not graphed. Tail latency matters enormously in production.</p>
+</li>
+<li>
+<p><strong>Memory overhead scaling:</strong> They claim 232 bytes per 16MB block (0.0014%). But their dependency tree can grow large. What's the memory overhead when you have 2000 LoRAs with deep conversation histories? The 676.5KB maximum they mention seems suspiciously low.</p>
+</li>
+<li>
+<p><strong>Interference patterns:</strong> What happens when multiple users are having long conversations with the <em>same</em> LoRA? The tree structure would have many branches from one LoRA node. Does this create contention?</p>
+</li>
+<li>
+<p><strong>The "invalid KV cache" metric:</strong> They claim vLLM has 42.4% invalid KV caches. How is this measured? A KV cache is "invalid" if its LoRA is swapped out, but what if that LoRA is about to be swapped back in? The temporal dynamics matter.</p>
+</li>
+</ol>
+<hr />
+<h2 id="5-the-zero-event-reality-check">5. The "Zero-Event" Reality Check</h2>
+<p><strong>Does the problem they solve actually occur frequently?</strong></p>
+<p>Their core claim is that usage dependencies between LoRAs and KV caches cause inefficiency. But look at their workload characteristics:</p>
+<ul>
+<li>Chatbot: Users typically stick with one LoRA per session</li>
+<li>Translation: Each language pair = one LoRA, users don't switch mid-conversation</li>
+<li>Personal Agents: Task-specific, likely consistent LoRA usage</li>
+</ul>
+<p>The "invalid KV cache" problem occurs when a LoRA is swapped out while its KVs remain. But in their scenarios, if a user is actively chatting, their LoRA should be "hot" and not swapped out. The problem seems most acute during <strong>load transitions</strong>—when user populations shift between LoRAs.</p>
+<p><strong>Question:</strong> What percentage of their trace actually exhibits the pathological case (LoRA swapped out, KVs still resident)? They say 42.4% for vLLM, but is this during steady-state or only during transitions?</p>
+<hr />
+<h2 id="6-the-cost-model-validation">6. The Cost Model Validation</h2>
+<p>Their cost model (Equation 6) combines:
+- LoRA quantity encouragement
+- Swap cost
+- Visit frequency<br />
+- LRU decay (sigmoid-based)</p>
+<p><strong>The Tuning Question:</strong>
+How were these components weighted? The paper doesn't mention any hyperparameter tuning. Did they try different sigmoid decay rates? Different ways to combine the factors? The ablation in Figure 16 shows each component helps, but not whether the <em>combination</em> is optimal.</p>
+<p><strong>The Prediction Accuracy:</strong>
+They claim "94.8% of the time, ELORA can ensure the loaded LoRA number is within ±5% error relative to Low_lora." But Low_lora is their <em>own estimate</em> of required LoRAs. This is circular—they're measuring how well they match their own prediction, not how well that prediction matches actual needs.</p>
+<hr />
+<h2 id="7-discussion-questions-for-the-student">7. Discussion Questions for the Student</h2>
+<ol>
+<li>
+<p><strong>If we ran this on a real Google Search query trace instead of chatbot conversations, do you think the gains would hold?</strong> Search queries are typically one-shot, not multi-turn. The KV cache reuse benefit would largely disappear.</p>
+</li>
+<li>
+<p><strong>The paper assumes LoRA weights don't affect serving performance. Under what conditions would this assumption break?</strong> Think about LoRAs with very different ranks, or LoRAs that produce very different output lengths.</p>
+</li>
+<li>
+<p><strong>Why do you think they excluded SGLang as a baseline?</strong> Is the GitHub issue justification sufficient, or should they have debugged it and included the comparison?</p>
+</li>
+<li>
+<p><strong>The 100ms monitoring interval for the cache swapper—is this the right granularity?</strong> What would happen with 10ms or 1000ms intervals? They don't explore this.</p>
+</li>
+<li>
+<p><strong>Their tree-based dependency structure assumes a clean hierarchy. What happens with techniques like LoRA merging or LoRA switching mid-conversation?</strong> The dependency tree might need restructuring.</p>
+</li>
+</ol>
+<hr />
+<h2 id="final-verdict">Final Verdict</h2>
+<p><strong>The methodology is above average but not bulletproof.</strong></p>
+<p><strong>Strengths:</strong>
+- Multiple realistic workloads from real traces
+- Multiple model sizes and LoRA counts
+- Ablation studies for each component
+- Comparison against oracle-tuned baseline (though buried)</p>
+<p><strong>Weaknesses:</strong>
+- Excluded a potentially strong baseline (SGLang) with weak justification
+- Fixed vLLM configuration that disadvantages the baseline
+- Missing sensitivity studies on key parameters
+- Circular validation of their prediction model
+- Threshold-based "peak load" metric can be misleading</p>
+<p><strong>The 45.7% TTFT reduction is probably real, but context-dependent.</strong> It's most valid for multi-turn conversation workloads with dynamic LoRA populations. For single-turn inference or stable LoRA distributions, the gains would likely be smaller.</p>
+<p><em>sets down red pen</em></p>
+<p>The paper solves a real problem with a reasonable solution. But those headline numbers? Take them with a grain of salt until you've verified your workload matches their assumptions.</p></div>
+                    <a href="#micro-1-work-1-tools-1-ca-1-kv-1-de-1" class="back-btn">&#8593; Back to top</a>
+                </div>
+            
+            </section>
+            <hr class="paper-divider">
+        
+</main>
+
+<script>
+// Toggle expand/collapse on paper click in nav
+document.querySelectorAll('.paper-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const li = this.closest('.nav-paper');
+        li.classList.toggle('expanded');
+    });
+});
+
+// Search/filter
+document.getElementById('search').addEventListener('input', function() {
+    const q = this.value.toLowerCase();
+    document.querySelectorAll('.nav-paper').forEach(li => {
+        const text = li.textContent.toLowerCase();
+        li.classList.toggle('hidden', q && !text.includes(q));
+    });
+});
+</script>
+
+</body>
+</html>
