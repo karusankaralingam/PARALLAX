@@ -36,7 +36,7 @@ except ImportError:
 
 BASE        = Path(__file__).parent.parent
 RUBRIC_PATH = BASE / 'eval-rubric.md'
-MODEL       = 'gemini-3-pro-preview'
+MODEL       = 'gemini-3.1-pro-preview'  # gemini-3-pro-preview retired (404); 3.1 is the live successor
 RUNS        = [(0.2, 1), (0.3, 2), (0.3, 3)]
 
 ABLATION_FILES = {
