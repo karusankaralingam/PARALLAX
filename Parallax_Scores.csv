@@ -1,0 +1,21 @@
+Paper,Analyst,Judge,Human Score 1,Human Score 2,Human Score 3,Human Score 4,Human Score 5,AI Score 1,AI Score 2,AI Score 3,AI Score 4,AI Score 5,Overall Preference
+Rethinking Prefetching,Adarsh Mittal,Aishwarya,4,5,4,5,4,5,5,5,4,5,AI Somewhat
+Precise Exceptions in Relaxed Architectures,Adarsh Mittal,Karu (senior),3,3,2,2,3,5,5,5,5,5,AI Clearly
+Hardware-aware Calibration Protocol,Ayushi Dubal,Karu (senior),3,3,4,3,3,5,5,5,5,5,AI Clearly
+Qtenon,Ayushi Dubal,Ian,4,3,3,4,4,3,4,4,4,3,Tie
+XOR Cache,chithra,Karu (senior),3,3,3,3,2,5,5,5,5,5,AI Clearly
+Accelerating FHE,chithra,Noah Scott,5,4,3,5,4,5,5,4,5,5,AI Somewhat
+Forest,Ian,Vishnu Ramadas,3,3,3,4,3,5,5,5,3,5,AI Clearly
+Last-Level Branch Predictor Revisited,Ian,Aishwarya,5,5,4,5,5,4,5,5,4,5,Human Somewhat
+Memory Processing Unit,Sreeraj,Noah Scott,4,4,5,4,4,5,5,5,4,5,AI Clearly
+MagiCache,Sreeraj,Karu (senior),3,2,4,4,4,5,5,5,3,4,Human Clearly
+Magellan,Nishant,Sreeraj,5,5,4,4,5,5,5,5,5,5,AI Somewhat
+C3 CXL Coherence Controllers,Nishant,Adarsh,4,4,4,5,4,5,5,5,4,5,AI Somewhat
+Proccess Only Where You Look,Noah Scott,Ranganath,4,5,4,5,4,5,3,5,5,5,AI Somewhat
+MemSOS,Noah Scott,Ayushi,4,5,4,5,3,5,5,5,5,5,AI Clearly
+CoopRT,Ranganath,Ian,3,3,3,4,2,4,4,4,4,4,AI Clearly
+LUT Tensor Core,Ranganath,Sreeraj,4,3,3,5,4,5,5,5,5,5,AI Clearly
+Profile-Guided Temporal Prefetching,Vishnu Ramadas,Ayushi,5,4,4,5,4,3,5,5,5,3,Human Somewhat
+LightML,Vishnu Ramadas,Weichu Yang,3,4,4,4,4,4,3,3,4,3,Human Somewhat
+SLINFER,Weichu Yang,Adarsh,4,4,4,5,4,5,5,5,4,5,AI Somewhat
+ELORA,Weichu Yang,Vishnu Ramadas,3,4,4,4,3,4,5,5,5,5,AI Clearly
